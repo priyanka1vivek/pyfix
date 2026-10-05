@@ -3,7 +3,7 @@
 
 A reproducible ML project that generates labelled Python failures, compares five classifiers, and uses the predicted bug category to guide a test-verified repair loop. Includes a FastAPI web workspace, CLI, offline demonstration, optional Gemini patch generation, experiment outputs and automated tests.
 
-**Build status:** ML experiments and 10 core checks ran successfully. FastAPI/pytest, Docker, live Gemini and browser rendering still require environment verification; see [validation status](docs/VALIDATION.md).
+**Build status:** Dataset generation, model training and all 11 pytest tests (including FastAPI integration) passed on [GitHub Actions](https://github.com/priyanka1vivek/pyfix/actions/runs/37267046220). Ten additional core checks passed locally. Docker, live Gemini and browser visual checks remain outstanding; see [validation status](docs/VALIDATION.md).
 
 ## Quick start — Windows / VS Code
 
