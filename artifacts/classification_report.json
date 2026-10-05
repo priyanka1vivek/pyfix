@@ -3,49 +3,49 @@
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 12.0
+    "support": 16.0
   },
   "missing_mapping_key": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 12.0
+    "support": 16.0
   },
   "missing_none_guard": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 11.0
+    "support": 2.0
   },
   "type_conversion": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 12.0
+    "support": 16.0
   },
   "wrong_argument_count": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 12.0
+    "support": 16.0
   },
   "zero_denominator": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 12.0
+    "support": 16.0
   },
   "accuracy": 1.0,
   "macro avg": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 71.0
+    "support": 82.0
   },
   "weighted avg": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 71.0
+    "support": 82.0
   }
 }

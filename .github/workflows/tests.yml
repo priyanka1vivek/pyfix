@@ -1,16 +1,46 @@
 name: Reproducibility and tests
-on: [push, pull_request]
+on: [push, pull_request, workflow_dispatch]
 permissions:
   contents: read
 jobs:
   verify:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - run: pip install -e .
+      - run: pip install -e . playwright
       - run: python -m pyfix.cli generate
       - run: python -m pyfix.cli train
+      - run: python -m pyfix.cli benchmark
+      - run: python -m unittest discover -s tests -p stdlib_checks.py -v
+      - run: docker build -f Dockerfile.runner -t pyfix-runner:1 .
       - run: pytest -q
+        env:
+          PYFIX_TEST_DOCKER: '1'
+      - run: python -m playwright install --with-deps chromium
+      - name: Verify browser and capture screenshots
+        run: |
+          PYFIX_RUNNER=trusted python -m pyfix.cli serve > /tmp/pyfix-server.log 2>&1 &
+          python - <<'PY'
+          import time, urllib.request
+          for attempt in range(40):
+              try:
+                  urllib.request.urlopen('http://127.0.0.1:8000/api/config',timeout=2)
+                  break
+              except OSError:
+                  time.sleep(.5)
+          else:
+              raise RuntimeError('App did not start')
+          PY
+          python scripts/browser_check.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: experiment-results
+          path: |
+            artifacts/
+            data/dataset.jsonl
+          retention-days: 14

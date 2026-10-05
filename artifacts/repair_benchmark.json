@@ -1,0 +1,1997 @@
+{
+  "provider": "offline",
+  "budget": 6,
+  "summary": {
+    "unguided": {
+      "programs": 12,
+      "visible_passes": 8,
+      "heldout_passes": 6,
+      "withheld_inputs_available": 10,
+      "attempts": 48
+    },
+    "guided": {
+      "programs": 12,
+      "visible_passes": 11,
+      "heldout_passes": 9,
+      "withheld_inputs_available": 10,
+      "attempts": 27
+    }
+  },
+  "records": [
+    {
+      "program": "sensor_average",
+      "label": "type_conversion",
+      "guided": false,
+      "status": "tests_passed",
+      "attempts": 3,
+      "seconds": 0.267,
+      "visible_tests_passed": true,
+      "heldout_tests_passed": true,
+      "hidden_input_count": 4,
+      "prediction": {
+        "label": "type_conversion",
+        "score": 0.8454107928736998,
+        "ranking": [
+          {
+            "label": "type_conversion",
+            "score": 0.8454107928736998
+          },
+          {
+            "label": "wrong_argument_count",
+            "score": 0.036856453540526316
+          },
+          {
+            "label": "zero_denominator",
+            "score": 0.03416994017661156
+          },
+          {
+            "label": "missing_mapping_key",
+            "score": 0.03322740134077897
+          },
+          {
+            "label": "missing_none_guard",
+            "score": 0.030937465545498272
+          },
+          {
+            "label": "index_boundary",
+            "score": 0.01939794652288502
+          }
+        ],
+        "decision": "supported",
+        "reasons": [],
+        "threshold": 0.25,
+        "vocabulary_overlap": 0.5851063829787234,
+        "exception": "TypeError",
+        "features": [
+          {
+            "token": "for",
+            "contribution": 0.29570122407448124
+          },
+          {
+            "token": "str",
+            "contribution": 0.20709199291441283
+          },
+          {
+            "token": "unsupported operand",
+            "contribution": 0.1972049429234291
+          },
+          {
+            "token": "s for",
+            "contribution": 0.1972049429234291
+          },
+          {
+            "token": "and",
+            "contribution": 0.1972049429234291
+          },
+          {
+            "token": "type s",
+            "contribution": 0.1972049429234291
+          },
+          {
+            "token": "s",
+            "contribution": 0.1972049429234291
+          },
+          {
+            "token": "unsupported",
+            "contribution": 0.1972049429234291
+          }
+        ],
+        "note": "Sigmoid-calibrated on held-out programs. Scores and rejection rules remain imperfect; tests decide patch acceptance."
+      },
+      "reason": null
+    },
+    {
+      "program": "sensor_average",
+      "label": "type_conversion",
+      "guided": true,
+      "status": "tests_passed",
+      "attempts": 3,
+      "seconds": 0.266,
+      "visible_tests_passed": true,
+      "heldout_tests_passed": true,
+      "hidden_input_count": 4,
+      "prediction": {
+        "label": "type_conversion",
+        "score": 0.8454107928736998,
+        "ranking": [
+          {
+            "label": "type_conversion",
+            "score": 0.8454107928736998
+          },
+          {
+            "label": "wrong_argument_count",
+            "score": 0.036856453540526316
+          },
+          {
+            "label": "zero_denominator",
+            "score": 0.03416994017661156
+          },
+          {
+            "label": "missing_mapping_key",
+            "score": 0.03322740134077897
+          },
+          {
+            "label": "missing_none_guard",
+            "score": 0.030937465545498272
+          },
+          {
+            "label": "index_boundary",
+            "score": 0.01939794652288502
+          }
+        ],
+        "decision": "supported",
+        "reasons": [],
+        "threshold": 0.25,
+        "vocabulary_overlap": 0.5851063829787234,
+        "exception": "TypeError",
+        "features": [
+          {
+            "token": "for",
+            "contribution": 0.29570122407448124
+          },
+          {
+            "token": "str",
+            "contribution": 0.20709199291441283
+          },
+          {
+            "token": "unsupported operand",
+            "contribution": 0.1972049429234291
+          },
+          {
+            "token": "s for",
+            "contribution": 0.1972049429234291
+          },
+          {
+            "token": "and",
+            "contribution": 0.1972049429234291
+          },
+          {
+            "token": "type s",
+            "contribution": 0.1972049429234291
+          },
+          {
+            "token": "s",
+            "contribution": 0.1972049429234291
+          },
+          {
+            "token": "unsupported",
+            "contribution": 0.1972049429234291
+          }
+        ],
+        "note": "Sigmoid-calibrated on held-out programs. Scores and rejection rules remain imperfect; tests decide patch acceptance."
+      },
+      "reason": null
+    },
+    {
+      "program": "duration",
+      "label": "type_conversion",
+      "guided": false,
+      "status": "tests_passed",
+      "attempts": 1,
+      "seconds": 0.136,
+      "visible_tests_passed": true,
+      "heldout_tests_passed": true,
+      "hidden_input_count": 4,
+      "prediction": {
+        "label": "type_conversion",
+        "score": 0.8674544354587568,
+        "ranking": [
+          {
+            "label": "type_conversion",
+            "score": 0.8674544354587568
+          },
+          {
+            "label": "wrong_argument_count",
+            "score": 0.031117281941681438
+          },
+          {
+            "label": "missing_none_guard",
+            "score": 0.030062541544931227
+          },
+          {
+            "label": "missing_mapping_key",
+            "score": 0.02826860988549187
+          },
+          {
+            "label": "zero_denominator",
+            "score": 0.025382411864615203
+          },
+          {
+            "label": "index_boundary",
+            "score": 0.01771471930452342
+          }
+        ],
+        "decision": "supported",
+        "reasons": [],
+        "threshold": 0.25,
+        "vocabulary_overlap": 0.5287356321839081,
+        "exception": "TypeError",
+        "features": [
+          {
+            "token": "str",
+            "contribution": 0.36799714755809537
+          },
+          {
+            "token": "int",
+            "contribution": 0.343718663768779
+          },
+          {
+            "token": "only concatenate",
+            "contribution": 0.18610789296612829
+          },
+          {
+            "token": "only",
+            "contribution": 0.18610789296612829
+          },
+          {
+            "token": "to",
+            "contribution": 0.18610789296612829
+          },
+          {
+            "token": "typeerror can",
+            "contribution": 0.18610789296612829
+          },
+          {
+            "token": "can",
+            "contribution": 0.18610789296612829
+          },
+          {
+            "token": "not int",
+            "contribution": 0.18610789296612829
+          }
+        ],
+        "note": "Sigmoid-calibrated on held-out programs. Scores and rejection rules remain imperfect; tests decide patch acceptance."
+      },
+      "reason": null
+    },
+    {
+      "program": "duration",
+      "label": "type_conversion",
+      "guided": true,
+      "status": "tests_passed",
+      "attempts": 1,
+      "seconds": 0.135,
+      "visible_tests_passed": true,
+      "heldout_tests_passed": true,
+      "hidden_input_count": 4,
+      "prediction": {
+        "label": "type_conversion",
+        "score": 0.8674544354587568,
+        "ranking": [
+          {
+            "label": "type_conversion",
+            "score": 0.8674544354587568
+          },
+          {
+            "label": "wrong_argument_count",
+            "score": 0.031117281941681438
+          },
+          {
+            "label": "missing_none_guard",
+            "score": 0.030062541544931227
+          },
+          {
+            "label": "missing_mapping_key",
+            "score": 0.02826860988549187
+          },
+          {
+            "label": "zero_denominator",
+            "score": 0.025382411864615203
+          },
+          {
+            "label": "index_boundary",
+            "score": 0.01771471930452342
+          }
+        ],
+        "decision": "supported",
+        "reasons": [],
+        "threshold": 0.25,
+        "vocabulary_overlap": 0.5287356321839081,
+        "exception": "TypeError",
+        "features": [
+          {
+            "token": "str",
+            "contribution": 0.36799714755809537
+          },
+          {
+            "token": "int",
+            "contribution": 0.343718663768779
+          },
+          {
+            "token": "only concatenate",
+            "contribution": 0.18610789296612829
+          },
+          {
+            "token": "only",
+            "contribution": 0.18610789296612829
+          },
+          {
+            "token": "to",
+            "contribution": 0.18610789296612829
+          },
+          {
+            "token": "typeerror can",
+            "contribution": 0.18610789296612829
+          },
+          {
+            "token": "can",
+            "contribution": 0.18610789296612829
+          },
+          {
+            "token": "not int",
+            "contribution": 0.18610789296612829
+          }
+        ],
+        "note": "Sigmoid-calibrated on held-out programs. Scores and rejection rules remain imperfect; tests decide patch acceptance."
+      },
+      "reason": null
+    },
+    {
+      "program": "optional_record",
+      "label": "missing_none_guard",
+      "guided": false,
+      "status": "tests_passed",
+      "attempts": 3,
+      "seconds": 0.266,
+      "visible_tests_passed": true,
+      "heldout_tests_passed": null,
+      "hidden_input_count": 0,
+      "prediction": {
+        "label": "missing_none_guard",
+        "score": 0.899506714941099,
+        "ranking": [
+          {
+            "label": "missing_none_guard",
+            "score": 0.899506714941099
+          },
+          {
+            "label": "type_conversion",
+            "score": 0.02467104582408683
+          },
+          {
+            "label": "wrong_argument_count",
+            "score": 0.022024796253587636
+          },
+          {
+            "label": "zero_denominator",
+            "score": 0.01980449389952067
+          },
+          {
+            "label": "missing_mapping_key",
+            "score": 0.018956848809235868
+          },
+          {
+            "label": "index_boundary",
+            "score": 0.015036100272469963
+          }
+        ],
+        "decision": "supported",
+        "reasons": [],
+        "threshold": 0.25,
+        "vocabulary_overlap": 0.525,
+        "exception": "AttributeError",
+        "features": [
+          {
+            "token": "object",
+            "contribution": 0.43987704528162613
+          },
+          {
+            "token": "nonetype",
+            "contribution": 0.43987704528162613
+          },
+          {
+            "token": "none",
+            "contribution": 0.43987704528162613
+          },
+          {
+            "token": "solve none",
+            "contribution": 0.43987704528162613
+          },
+          {
+            "token": "nonetype object",
+            "contribution": 0.43987704528162613
+          },
+          {
+            "token": "none file",
+            "contribution": 0.43987704528162613
+          },
+          {
+            "token": "attributeerror nonetype",
+            "contribution": 0.3765936612177915
+          },
+          {
+            "token": "attributeerror",
+            "contribution": 0.3765936612177915
+          }
+        ],
+        "note": "Sigmoid-calibrated on held-out programs. Scores and rejection rules remain imperfect; tests decide patch acceptance."
+      },
+      "reason": null
+    },
+    {
+      "program": "optional_record",
+      "label": "missing_none_guard",
+      "guided": true,
+      "status": "tests_passed",
+      "attempts": 3,
+      "seconds": 0.265,
+      "visible_tests_passed": true,
+      "heldout_tests_passed": null,
+      "hidden_input_count": 0,
+      "prediction": {
+        "label": "missing_none_guard",
+        "score": 0.899506714941099,
+        "ranking": [
+          {
+            "label": "missing_none_guard",
+            "score": 0.899506714941099
+          },
+          {
+            "label": "type_conversion",
+            "score": 0.02467104582408683
+          },
+          {
+            "label": "wrong_argument_count",
+            "score": 0.022024796253587636
+          },
+          {
+            "label": "zero_denominator",
+            "score": 0.01980449389952067
+          },
+          {
+            "label": "missing_mapping_key",
+            "score": 0.018956848809235868
+          },
+          {
+            "label": "index_boundary",
+            "score": 0.015036100272469963
+          }
+        ],
+        "decision": "supported",
+        "reasons": [],
+        "threshold": 0.25,
+        "vocabulary_overlap": 0.525,
+        "exception": "AttributeError",
+        "features": [
+          {
+            "token": "object",
+            "contribution": 0.43987704528162613
+          },
+          {
+            "token": "nonetype",
+            "contribution": 0.43987704528162613
+          },
+          {
+            "token": "none",
+            "contribution": 0.43987704528162613
+          },
+          {
+            "token": "solve none",
+            "contribution": 0.43987704528162613
+          },
+          {
+            "token": "nonetype object",
+            "contribution": 0.43987704528162613
+          },
+          {
+            "token": "none file",
+            "contribution": 0.43987704528162613
+          },
+          {
+            "token": "attributeerror nonetype",
+            "contribution": 0.3765936612177915
+          },
+          {
+            "token": "attributeerror",
+            "contribution": 0.3765936612177915
+          }
+        ],
+        "note": "Sigmoid-calibrated on held-out programs. Scores and rejection rules remain imperfect; tests decide patch acceptance."
+      },
+      "reason": null
+    },
+    {
+      "program": "optional_label",
+      "label": "missing_none_guard",
+      "guided": false,
+      "status": "tests_passed",
+      "attempts": 2,
+      "seconds": 0.201,
+      "visible_tests_passed": true,
+      "heldout_tests_passed": null,
+      "hidden_input_count": 0,
+      "prediction": {
+        "label": "missing_none_guard",
+        "score": 0.8997158760258721,
+        "ranking": [
+          {
+            "label": "missing_none_guard",
+            "score": 0.8997158760258721
+          },
+          {
+            "label": "type_conversion",
+            "score": 0.024648183871375046
+          },
+          {
+            "label": "wrong_argument_count",
+            "score": 0.02198741729511182
+          },
+          {
+            "label": "zero_denominator",
+            "score": 0.01977531131029228
+          },
+          {
+            "label": "missing_mapping_key",
+            "score": 0.01890389870378082
+          },
+          {
+            "label": "index_boundary",
+            "score": 0.014969312793567828
+          }
+        ],
+        "decision": "supported",
+        "reasons": [],
+        "threshold": 0.25,
+        "vocabulary_overlap": 0.5125,
+        "exception": "AttributeError",
+        "features": [
+          {
+            "token": "solve none",
+            "contribution": 0.44446394934828626
+          },
+          {
+            "token": "object",
+            "contribution": 0.44446394934828626
+          },
+          {
+            "token": "none file",
+            "contribution": 0.44446394934828626
+          },
+          {
+            "token": "none",
+            "contribution": 0.44446394934828626
+          },
+          {
+            "token": "nonetype",
+            "contribution": 0.44446394934828626
+          },
+          {
+            "token": "nonetype object",
+            "contribution": 0.44446394934828626
+          },
+          {
+            "token": "has no",
+            "contribution": 0.3805206653991813
+          },
+          {
+            "token": "has",
+            "contribution": 0.3805206653991813
+          }
+        ],
+        "note": "Sigmoid-calibrated on held-out programs. Scores and rejection rules remain imperfect; tests decide patch acceptance."
+      },
+      "reason": null
+    },
+    {
+      "program": "optional_label",
+      "label": "missing_none_guard",
+      "guided": true,
+      "status": "tests_passed",
+      "attempts": 2,
+      "seconds": 0.2,
+      "visible_tests_passed": true,
+      "heldout_tests_passed": null,
+      "hidden_input_count": 0,
+      "prediction": {
+        "label": "missing_none_guard",
+        "score": 0.8997158760258721,
+        "ranking": [
+          {
+            "label": "missing_none_guard",
+            "score": 0.8997158760258721
+          },
+          {
+            "label": "type_conversion",
+            "score": 0.024648183871375046
+          },
+          {
+            "label": "wrong_argument_count",
+            "score": 0.02198741729511182
+          },
+          {
+            "label": "zero_denominator",
+            "score": 0.01977531131029228
+          },
+          {
+            "label": "missing_mapping_key",
+            "score": 0.01890389870378082
+          },
+          {
+            "label": "index_boundary",
+            "score": 0.014969312793567828
+          }
+        ],
+        "decision": "supported",
+        "reasons": [],
+        "threshold": 0.25,
+        "vocabulary_overlap": 0.5125,
+        "exception": "AttributeError",
+        "features": [
+          {
+            "token": "solve none",
+            "contribution": 0.44446394934828626
+          },
+          {
+            "token": "object",
+            "contribution": 0.44446394934828626
+          },
+          {
+            "token": "none file",
+            "contribution": 0.44446394934828626
+          },
+          {
+            "token": "none",
+            "contribution": 0.44446394934828626
+          },
+          {
+            "token": "nonetype",
+            "contribution": 0.44446394934828626
+          },
+          {
+            "token": "nonetype object",
+            "contribution": 0.44446394934828626
+          },
+          {
+            "token": "has no",
+            "contribution": 0.3805206653991813
+          },
+          {
+            "token": "has",
+            "contribution": 0.3805206653991813
+          }
+        ],
+        "note": "Sigmoid-calibrated on held-out programs. Scores and rejection rules remain imperfect; tests decide patch acceptance."
+      },
+      "reason": null
+    },
+    {
+      "program": "suffix",
+      "label": "index_boundary",
+      "guided": false,
+      "status": "tests_passed",
+      "attempts": 4,
+      "seconds": 0.33,
+      "visible_tests_passed": true,
+      "heldout_tests_passed": true,
+      "hidden_input_count": 4,
+      "prediction": {
+        "label": "index_boundary",
+        "score": 0.8828851750259963,
+        "ranking": [
+          {
+            "label": "index_boundary",
+            "score": 0.8828851750259963
+          },
+          {
+            "label": "missing_none_guard",
+            "score": 0.026454156998777626
+          },
+          {
+            "label": "type_conversion",
+            "score": 0.02519991621330243
+          },
+          {
+            "label": "wrong_argument_count",
+            "score": 0.02359623499125367
+          },
+          {
+            "label": "zero_denominator",
+            "score": 0.021319012257858667
+          },
+          {
+            "label": "missing_mapping_key",
+            "score": 0.02054550451281137
+          }
+        ],
+        "decision": "supported",
+        "reasons": [],
+        "threshold": 0.25,
+        "vocabulary_overlap": 0.48148148148148145,
+        "exception": "IndexError",
+        "features": [
+          {
+            "token": "indexerror list",
+            "contribution": 0.36218420640023247
+          },
+          {
+            "token": "list",
+            "contribution": 0.36218420640023247
+          },
+          {
+            "token": "list index",
+            "contribution": 0.36218420640023247
+          },
+          {
+            "token": "of",
+            "contribution": 0.355384702091573
+          },
+          {
+            "token": "index",
+            "contribution": 0.355384702091573
+          },
+          {
+            "token": "index out",
+            "contribution": 0.355384702091573
+          },
+          {
+            "token": "indexerror",
+            "contribution": 0.355384702091573
+          },
+          {
+            "token": "out",
+            "contribution": 0.355384702091573
+          }
+        ],
+        "note": "Sigmoid-calibrated on held-out programs. Scores and rejection rules remain imperfect; tests decide patch acceptance."
+      },
+      "reason": null
+    },
+    {
+      "program": "suffix",
+      "label": "index_boundary",
+      "guided": true,
+      "status": "tests_passed",
+      "attempts": 1,
+      "seconds": 0.134,
+      "visible_tests_passed": true,
+      "heldout_tests_passed": true,
+      "hidden_input_count": 4,
+      "prediction": {
+        "label": "index_boundary",
+        "score": 0.8828851750259963,
+        "ranking": [
+          {
+            "label": "index_boundary",
+            "score": 0.8828851750259963
+          },
+          {
+            "label": "missing_none_guard",
+            "score": 0.026454156998777626
+          },
+          {
+            "label": "type_conversion",
+            "score": 0.02519991621330243
+          },
+          {
+            "label": "wrong_argument_count",
+            "score": 0.02359623499125367
+          },
+          {
+            "label": "zero_denominator",
+            "score": 0.021319012257858667
+          },
+          {
+            "label": "missing_mapping_key",
+            "score": 0.02054550451281137
+          }
+        ],
+        "decision": "supported",
+        "reasons": [],
+        "threshold": 0.25,
+        "vocabulary_overlap": 0.48148148148148145,
+        "exception": "IndexError",
+        "features": [
+          {
+            "token": "indexerror list",
+            "contribution": 0.36218420640023247
+          },
+          {
+            "token": "list",
+            "contribution": 0.36218420640023247
+          },
+          {
+            "token": "list index",
+            "contribution": 0.36218420640023247
+          },
+          {
+            "token": "of",
+            "contribution": 0.355384702091573
+          },
+          {
+            "token": "index",
+            "contribution": 0.355384702091573
+          },
+          {
+            "token": "index out",
+            "contribution": 0.355384702091573
+          },
+          {
+            "token": "indexerror",
+            "contribution": 0.355384702091573
+          },
+          {
+            "token": "out",
+            "contribution": 0.355384702091573
+          }
+        ],
+        "note": "Sigmoid-calibrated on held-out programs. Scores and rejection rules remain imperfect; tests decide patch acceptance."
+      },
+      "reason": null
+    },
+    {
+      "program": "backward_scan",
+      "label": "index_boundary",
+      "guided": false,
+      "status": "tests_passed",
+      "attempts": 4,
+      "seconds": 0.332,
+      "visible_tests_passed": true,
+      "heldout_tests_passed": true,
+      "hidden_input_count": 4,
+      "prediction": {
+        "label": "index_boundary",
+        "score": 0.885283999040031,
+        "ranking": [
+          {
+            "label": "index_boundary",
+            "score": 0.885283999040031
+          },
+          {
+            "label": "missing_none_guard",
+            "score": 0.026100734246623375
+          },
+          {
+            "label": "type_conversion",
+            "score": 0.025051605697883932
+          },
+          {
+            "label": "wrong_argument_count",
+            "score": 0.02272261890432756
+          },
+          {
+            "label": "zero_denominator",
+            "score": 0.020673194346591928
+          },
+          {
+            "label": "missing_mapping_key",
+            "score": 0.020167847764542092
+          }
+        ],
+        "decision": "supported",
+        "reasons": [],
+        "threshold": 0.25,
+        "vocabulary_overlap": 0.5882352941176471,
+        "exception": "IndexError",
+        "features": [
+          {
+            "token": "x i",
+            "contribution": 0.26783209091782917
+          },
+          {
+            "token": "i",
+            "contribution": 0.26783209091782917
+          },
+          {
+            "token": "list",
+            "contribution": 0.2366823361000143
+          },
+          {
+            "token": "list index",
+            "contribution": 0.2366823361000143
+          },
+          {
+            "token": "indexerror list",
+            "contribution": 0.2366823361000143
+          },
+          {
+            "token": "append x",
+            "contribution": 0.2344701513109936
+          },
+          {
+            "token": "i indexerror",
+            "contribution": 0.2344701513109936
+          },
+          {
+            "token": "index",
+            "contribution": 0.2322389547055278
+          }
+        ],
+        "note": "Sigmoid-calibrated on held-out programs. Scores and rejection rules remain imperfect; tests decide patch acceptance."
+      },
+      "reason": null
+    },
+    {
+      "program": "backward_scan",
+      "label": "index_boundary",
+      "guided": true,
+      "status": "tests_passed",
+      "attempts": 1,
+      "seconds": 0.135,
+      "visible_tests_passed": true,
+      "heldout_tests_passed": true,
+      "hidden_input_count": 4,
+      "prediction": {
+        "label": "index_boundary",
+        "score": 0.885283999040031,
+        "ranking": [
+          {
+            "label": "index_boundary",
+            "score": 0.885283999040031
+          },
+          {
+            "label": "missing_none_guard",
+            "score": 0.026100734246623375
+          },
+          {
+            "label": "type_conversion",
+            "score": 0.025051605697883932
+          },
+          {
+            "label": "wrong_argument_count",
+            "score": 0.02272261890432756
+          },
+          {
+            "label": "zero_denominator",
+            "score": 0.020673194346591928
+          },
+          {
+            "label": "missing_mapping_key",
+            "score": 0.020167847764542092
+          }
+        ],
+        "decision": "supported",
+        "reasons": [],
+        "threshold": 0.25,
+        "vocabulary_overlap": 0.5882352941176471,
+        "exception": "IndexError",
+        "features": [
+          {
+            "token": "x i",
+            "contribution": 0.26783209091782917
+          },
+          {
+            "token": "i",
+            "contribution": 0.26783209091782917
+          },
+          {
+            "token": "list",
+            "contribution": 0.2366823361000143
+          },
+          {
+            "token": "list index",
+            "contribution": 0.2366823361000143
+          },
+          {
+            "token": "indexerror list",
+            "contribution": 0.2366823361000143
+          },
+          {
+            "token": "append x",
+            "contribution": 0.2344701513109936
+          },
+          {
+            "token": "i indexerror",
+            "contribution": 0.2344701513109936
+          },
+          {
+            "token": "index",
+            "contribution": 0.2322389547055278
+          }
+        ],
+        "note": "Sigmoid-calibrated on held-out programs. Scores and rejection rules remain imperfect; tests decide patch acceptance."
+      },
+      "reason": null
+    },
+    {
+      "program": "language",
+      "label": "missing_mapping_key",
+      "guided": false,
+      "status": "needs_review",
+      "attempts": 6,
+      "seconds": 0.461,
+      "visible_tests_passed": false,
+      "heldout_tests_passed": null,
+      "hidden_input_count": 4,
+      "prediction": {
+        "label": "missing_mapping_key",
+        "score": 0.7517293236759581,
+        "ranking": [
+          {
+            "label": "missing_mapping_key",
+            "score": 0.7517293236759581
+          },
+          {
+            "label": "wrong_argument_count",
+            "score": 0.10731477148673021
+          },
+          {
+            "label": "zero_denominator",
+            "score": 0.06493058507421257
+          },
+          {
+            "label": "type_conversion",
+            "score": 0.02633603755799256
+          },
+          {
+            "label": "missing_none_guard",
+            "score": 0.024977034896871364
+          },
+          {
+            "label": "index_boundary",
+            "score": 0.024712247308234996
+          }
+        ],
+        "decision": "supported",
+        "reasons": [],
+        "threshold": 0.25,
+        "vocabulary_overlap": 0.38571428571428573,
+        "exception": "KeyError",
+        "features": [
+          {
+            "token": "keyerror",
+            "contribution": 0.5308077845515037
+          },
+          {
+            "token": "x",
+            "contribution": 0.172257423322273
+          },
+          {
+            "token": "in",
+            "contribution": 0.038907335675747674
+          },
+          {
+            "token": "py",
+            "contribution": 0.032721340917147027
+          },
+          {
+            "token": "line",
+            "contribution": 0.032721340917147027
+          },
+          {
+            "token": "line n",
+            "contribution": 0.032721340917147027
+          },
+          {
+            "token": "file",
+            "contribution": 0.032721340917147027
+          },
+          {
+            "token": "py line",
+            "contribution": 0.032721340917147027
+          }
+        ],
+        "note": "Sigmoid-calibrated on held-out programs. Scores and rejection rules remain imperfect; tests decide patch acceptance."
+      },
+      "reason": "No candidate passed the unchanged verification tests within the budget."
+    },
+    {
+      "program": "language",
+      "label": "missing_mapping_key",
+      "guided": true,
+      "status": "tests_passed",
+      "attempts": 4,
+      "seconds": 0.33,
+      "visible_tests_passed": true,
+      "heldout_tests_passed": true,
+      "hidden_input_count": 4,
+      "prediction": {
+        "label": "missing_mapping_key",
+        "score": 0.7517293236759581,
+        "ranking": [
+          {
+            "label": "missing_mapping_key",
+            "score": 0.7517293236759581
+          },
+          {
+            "label": "wrong_argument_count",
+            "score": 0.10731477148673021
+          },
+          {
+            "label": "zero_denominator",
+            "score": 0.06493058507421257
+          },
+          {
+            "label": "type_conversion",
+            "score": 0.02633603755799256
+          },
+          {
+            "label": "missing_none_guard",
+            "score": 0.024977034896871364
+          },
+          {
+            "label": "index_boundary",
+            "score": 0.024712247308234996
+          }
+        ],
+        "decision": "supported",
+        "reasons": [],
+        "threshold": 0.25,
+        "vocabulary_overlap": 0.38571428571428573,
+        "exception": "KeyError",
+        "features": [
+          {
+            "token": "keyerror",
+            "contribution": 0.5308077845515037
+          },
+          {
+            "token": "x",
+            "contribution": 0.172257423322273
+          },
+          {
+            "token": "in",
+            "contribution": 0.038907335675747674
+          },
+          {
+            "token": "py",
+            "contribution": 0.032721340917147027
+          },
+          {
+            "token": "line",
+            "contribution": 0.032721340917147027
+          },
+          {
+            "token": "line n",
+            "contribution": 0.032721340917147027
+          },
+          {
+            "token": "file",
+            "contribution": 0.032721340917147027
+          },
+          {
+            "token": "py line",
+            "contribution": 0.032721340917147027
+          }
+        ],
+        "note": "Sigmoid-calibrated on held-out programs. Scores and rejection rules remain imperfect; tests decide patch acceptance."
+      },
+      "reason": null
+    },
+    {
+      "program": "discount",
+      "label": "missing_mapping_key",
+      "guided": false,
+      "status": "tests_passed",
+      "attempts": 4,
+      "seconds": 0.335,
+      "visible_tests_passed": true,
+      "heldout_tests_passed": true,
+      "hidden_input_count": 4,
+      "prediction": {
+        "label": "missing_mapping_key",
+        "score": 0.7517293236759581,
+        "ranking": [
+          {
+            "label": "missing_mapping_key",
+            "score": 0.7517293236759581
+          },
+          {
+            "label": "wrong_argument_count",
+            "score": 0.10731477148673021
+          },
+          {
+            "label": "zero_denominator",
+            "score": 0.06493058507421257
+          },
+          {
+            "label": "type_conversion",
+            "score": 0.02633603755799256
+          },
+          {
+            "label": "missing_none_guard",
+            "score": 0.024977034896871364
+          },
+          {
+            "label": "index_boundary",
+            "score": 0.024712247308234996
+          }
+        ],
+        "decision": "supported",
+        "reasons": [],
+        "threshold": 0.25,
+        "vocabulary_overlap": 0.38571428571428573,
+        "exception": "KeyError",
+        "features": [
+          {
+            "token": "keyerror",
+            "contribution": 0.5308077845515037
+          },
+          {
+            "token": "x",
+            "contribution": 0.172257423322273
+          },
+          {
+            "token": "in",
+            "contribution": 0.038907335675747674
+          },
+          {
+            "token": "py",
+            "contribution": 0.032721340917147027
+          },
+          {
+            "token": "line",
+            "contribution": 0.032721340917147027
+          },
+          {
+            "token": "line n",
+            "contribution": 0.032721340917147027
+          },
+          {
+            "token": "file",
+            "contribution": 0.032721340917147027
+          },
+          {
+            "token": "py line",
+            "contribution": 0.032721340917147027
+          }
+        ],
+        "note": "Sigmoid-calibrated on held-out programs. Scores and rejection rules remain imperfect; tests decide patch acceptance."
+      },
+      "reason": null
+    },
+    {
+      "program": "discount",
+      "label": "missing_mapping_key",
+      "guided": true,
+      "status": "tests_passed",
+      "attempts": 1,
+      "seconds": 0.139,
+      "visible_tests_passed": true,
+      "heldout_tests_passed": true,
+      "hidden_input_count": 4,
+      "prediction": {
+        "label": "missing_mapping_key",
+        "score": 0.7517293236759581,
+        "ranking": [
+          {
+            "label": "missing_mapping_key",
+            "score": 0.7517293236759581
+          },
+          {
+            "label": "wrong_argument_count",
+            "score": 0.10731477148673021
+          },
+          {
+            "label": "zero_denominator",
+            "score": 0.06493058507421257
+          },
+          {
+            "label": "type_conversion",
+            "score": 0.02633603755799256
+          },
+          {
+            "label": "missing_none_guard",
+            "score": 0.024977034896871364
+          },
+          {
+            "label": "index_boundary",
+            "score": 0.024712247308234996
+          }
+        ],
+        "decision": "supported",
+        "reasons": [],
+        "threshold": 0.25,
+        "vocabulary_overlap": 0.38571428571428573,
+        "exception": "KeyError",
+        "features": [
+          {
+            "token": "keyerror",
+            "contribution": 0.5308077845515037
+          },
+          {
+            "token": "x",
+            "contribution": 0.172257423322273
+          },
+          {
+            "token": "in",
+            "contribution": 0.038907335675747674
+          },
+          {
+            "token": "py",
+            "contribution": 0.032721340917147027
+          },
+          {
+            "token": "line",
+            "contribution": 0.032721340917147027
+          },
+          {
+            "token": "line n",
+            "contribution": 0.032721340917147027
+          },
+          {
+            "token": "file",
+            "contribution": 0.032721340917147027
+          },
+          {
+            "token": "py line",
+            "contribution": 0.032721340917147027
+          }
+        ],
+        "note": "Sigmoid-calibrated on held-out programs. Scores and rejection rules remain imperfect; tests decide patch acceptance."
+      },
+      "reason": null
+    },
+    {
+      "program": "unit_cost",
+      "label": "zero_denominator",
+      "guided": false,
+      "status": "needs_review",
+      "attempts": 6,
+      "seconds": 0.463,
+      "visible_tests_passed": false,
+      "heldout_tests_passed": null,
+      "hidden_input_count": 4,
+      "prediction": {
+        "label": "zero_denominator",
+        "score": 0.8613827328862222,
+        "ranking": [
+          {
+            "label": "zero_denominator",
+            "score": 0.8613827328862222
+          },
+          {
+            "label": "wrong_argument_count",
+            "score": 0.04036364535235921
+          },
+          {
+            "label": "missing_none_guard",
+            "score": 0.02739252219957876
+          },
+          {
+            "label": "type_conversion",
+            "score": 0.027024745867118668
+          },
+          {
+            "label": "missing_mapping_key",
+            "score": 0.026941223010118562
+          },
+          {
+            "label": "index_boundary",
+            "score": 0.016895130684602494
+          }
+        ],
+        "decision": "supported",
+        "reasons": [],
+        "threshold": 0.25,
+        "vocabulary_overlap": 0.5324675324675324,
+        "exception": "ZeroDivisionError",
+        "features": [
+          {
+            "token": "0",
+            "contribution": 0.37585945178376823
+          },
+          {
+            "token": "0 0",
+            "contribution": 0.32845967471222054
+          },
+          {
+            "token": "zerodivisionerror division",
+            "contribution": 0.3090705099215416
+          },
+          {
+            "token": "division by",
+            "contribution": 0.3090705099215416
+          },
+          {
+            "token": "division",
+            "contribution": 0.28846856504041446
+          },
+          {
+            "token": "zerodivisionerror",
+            "contribution": 0.28846856504041446
+          },
+          {
+            "token": "zero",
+            "contribution": 0.28846856504041446
+          },
+          {
+            "token": "by",
+            "contribution": 0.28846856504041446
+          }
+        ],
+        "note": "Sigmoid-calibrated on held-out programs. Scores and rejection rules remain imperfect; tests decide patch acceptance."
+      },
+      "reason": "No candidate passed the unchanged verification tests within the budget."
+    },
+    {
+      "program": "unit_cost",
+      "label": "zero_denominator",
+      "guided": true,
+      "status": "tests_passed",
+      "attempts": 1,
+      "seconds": 0.135,
+      "visible_tests_passed": true,
+      "heldout_tests_passed": true,
+      "hidden_input_count": 4,
+      "prediction": {
+        "label": "zero_denominator",
+        "score": 0.8613827328862222,
+        "ranking": [
+          {
+            "label": "zero_denominator",
+            "score": 0.8613827328862222
+          },
+          {
+            "label": "wrong_argument_count",
+            "score": 0.04036364535235921
+          },
+          {
+            "label": "missing_none_guard",
+            "score": 0.02739252219957876
+          },
+          {
+            "label": "type_conversion",
+            "score": 0.027024745867118668
+          },
+          {
+            "label": "missing_mapping_key",
+            "score": 0.026941223010118562
+          },
+          {
+            "label": "index_boundary",
+            "score": 0.016895130684602494
+          }
+        ],
+        "decision": "supported",
+        "reasons": [],
+        "threshold": 0.25,
+        "vocabulary_overlap": 0.5324675324675324,
+        "exception": "ZeroDivisionError",
+        "features": [
+          {
+            "token": "0",
+            "contribution": 0.37585945178376823
+          },
+          {
+            "token": "0 0",
+            "contribution": 0.32845967471222054
+          },
+          {
+            "token": "zerodivisionerror division",
+            "contribution": 0.3090705099215416
+          },
+          {
+            "token": "division by",
+            "contribution": 0.3090705099215416
+          },
+          {
+            "token": "division",
+            "contribution": 0.28846856504041446
+          },
+          {
+            "token": "zerodivisionerror",
+            "contribution": 0.28846856504041446
+          },
+          {
+            "token": "zero",
+            "contribution": 0.28846856504041446
+          },
+          {
+            "token": "by",
+            "contribution": 0.28846856504041446
+          }
+        ],
+        "note": "Sigmoid-calibrated on held-out programs. Scores and rejection rules remain imperfect; tests decide patch acceptance."
+      },
+      "reason": null
+    },
+    {
+      "program": "speed",
+      "label": "zero_denominator",
+      "guided": false,
+      "status": "needs_review",
+      "attempts": 6,
+      "seconds": 0.461,
+      "visible_tests_passed": false,
+      "heldout_tests_passed": null,
+      "hidden_input_count": 4,
+      "prediction": {
+        "label": "zero_denominator",
+        "score": 0.8859294200073659,
+        "ranking": [
+          {
+            "label": "zero_denominator",
+            "score": 0.8859294200073659
+          },
+          {
+            "label": "missing_none_guard",
+            "score": 0.025825770279227674
+          },
+          {
+            "label": "wrong_argument_count",
+            "score": 0.02577187993249288
+          },
+          {
+            "label": "type_conversion",
+            "score": 0.02473321437897996
+          },
+          {
+            "label": "missing_mapping_key",
+            "score": 0.0222388066933216
+          },
+          {
+            "label": "index_boundary",
+            "score": 0.015500908708612048
+          }
+        ],
+        "decision": "supported",
+        "reasons": [],
+        "threshold": 0.25,
+        "vocabulary_overlap": 0.5135135135135135,
+        "exception": "ZeroDivisionError",
+        "features": [
+          {
+            "token": "0",
+            "contribution": 0.38415164042362887
+          },
+          {
+            "token": "zerodivisionerror division",
+            "contribution": 0.3454281587920507
+          },
+          {
+            "token": "division by",
+            "contribution": 0.3454281587920507
+          },
+          {
+            "token": "zerodivisionerror",
+            "contribution": 0.32240269483034945
+          },
+          {
+            "token": "zero",
+            "contribution": 0.32240269483034945
+          },
+          {
+            "token": "by",
+            "contribution": 0.32240269483034945
+          },
+          {
+            "token": "by zero",
+            "contribution": 0.32240269483034945
+          },
+          {
+            "token": "division",
+            "contribution": 0.32240269483034945
+          }
+        ],
+        "note": "Sigmoid-calibrated on held-out programs. Scores and rejection rules remain imperfect; tests decide patch acceptance."
+      },
+      "reason": "No candidate passed the unchanged verification tests within the budget."
+    },
+    {
+      "program": "speed",
+      "label": "zero_denominator",
+      "guided": true,
+      "status": "tests_passed",
+      "attempts": 1,
+      "seconds": 0.135,
+      "visible_tests_passed": true,
+      "heldout_tests_passed": true,
+      "hidden_input_count": 4,
+      "prediction": {
+        "label": "zero_denominator",
+        "score": 0.8859294200073659,
+        "ranking": [
+          {
+            "label": "zero_denominator",
+            "score": 0.8859294200073659
+          },
+          {
+            "label": "missing_none_guard",
+            "score": 0.025825770279227674
+          },
+          {
+            "label": "wrong_argument_count",
+            "score": 0.02577187993249288
+          },
+          {
+            "label": "type_conversion",
+            "score": 0.02473321437897996
+          },
+          {
+            "label": "missing_mapping_key",
+            "score": 0.0222388066933216
+          },
+          {
+            "label": "index_boundary",
+            "score": 0.015500908708612048
+          }
+        ],
+        "decision": "supported",
+        "reasons": [],
+        "threshold": 0.25,
+        "vocabulary_overlap": 0.5135135135135135,
+        "exception": "ZeroDivisionError",
+        "features": [
+          {
+            "token": "0",
+            "contribution": 0.38415164042362887
+          },
+          {
+            "token": "zerodivisionerror division",
+            "contribution": 0.3454281587920507
+          },
+          {
+            "token": "division by",
+            "contribution": 0.3454281587920507
+          },
+          {
+            "token": "zerodivisionerror",
+            "contribution": 0.32240269483034945
+          },
+          {
+            "token": "zero",
+            "contribution": 0.32240269483034945
+          },
+          {
+            "token": "by",
+            "contribution": 0.32240269483034945
+          },
+          {
+            "token": "by zero",
+            "contribution": 0.32240269483034945
+          },
+          {
+            "token": "division",
+            "contribution": 0.32240269483034945
+          }
+        ],
+        "note": "Sigmoid-calibrated on held-out programs. Scores and rejection rules remain imperfect; tests decide patch acceptance."
+      },
+      "reason": null
+    },
+    {
+      "program": "partition_count",
+      "label": "wrong_argument_count",
+      "guided": false,
+      "status": "tests_passed",
+      "attempts": 3,
+      "seconds": 0.265,
+      "visible_tests_passed": true,
+      "heldout_tests_passed": true,
+      "hidden_input_count": 4,
+      "prediction": {
+        "label": "wrong_argument_count",
+        "score": 0.525348661082521,
+        "ranking": [
+          {
+            "label": "wrong_argument_count",
+            "score": 0.525348661082521
+          },
+          {
+            "label": "zero_denominator",
+            "score": 0.2283516364932654
+          },
+          {
+            "label": "missing_mapping_key",
+            "score": 0.12318036511944006
+          },
+          {
+            "label": "type_conversion",
+            "score": 0.04491522646904834
+          },
+          {
+            "label": "missing_none_guard",
+            "score": 0.04238784942671996
+          },
+          {
+            "label": "index_boundary",
+            "score": 0.03581626140900537
+          }
+        ],
+        "decision": "supported",
+        "reasons": [],
+        "threshold": 0.25,
+        "vocabulary_overlap": 0.44155844155844154,
+        "exception": "TypeError",
+        "features": [
+          {
+            "token": "1",
+            "contribution": 0.3523992058439068
+          },
+          {
+            "token": "x typeerror",
+            "contribution": 0.2892044328513335
+          },
+          {
+            "token": "0",
+            "contribution": 0.17084299087917532
+          },
+          {
+            "token": "typeerror",
+            "contribution": 0.12808691804641997
+          },
+          {
+            "token": "solve 0",
+            "contribution": 0.10491296698933328
+          },
+          {
+            "token": "2",
+            "contribution": 0.08147738222996316
+          },
+          {
+            "token": "solve return",
+            "contribution": 0.058549785010430955
+          },
+          {
+            "token": "return",
+            "contribution": 0.058549785010430955
+          }
+        ],
+        "note": "Sigmoid-calibrated on held-out programs. Scores and rejection rules remain imperfect; tests decide patch acceptance."
+      },
+      "reason": null
+    },
+    {
+      "program": "partition_count",
+      "label": "wrong_argument_count",
+      "guided": true,
+      "status": "tests_passed",
+      "attempts": 3,
+      "seconds": 0.266,
+      "visible_tests_passed": true,
+      "heldout_tests_passed": true,
+      "hidden_input_count": 4,
+      "prediction": {
+        "label": "wrong_argument_count",
+        "score": 0.525348661082521,
+        "ranking": [
+          {
+            "label": "wrong_argument_count",
+            "score": 0.525348661082521
+          },
+          {
+            "label": "zero_denominator",
+            "score": 0.2283516364932654
+          },
+          {
+            "label": "missing_mapping_key",
+            "score": 0.12318036511944006
+          },
+          {
+            "label": "type_conversion",
+            "score": 0.04491522646904834
+          },
+          {
+            "label": "missing_none_guard",
+            "score": 0.04238784942671996
+          },
+          {
+            "label": "index_boundary",
+            "score": 0.03581626140900537
+          }
+        ],
+        "decision": "supported",
+        "reasons": [],
+        "threshold": 0.25,
+        "vocabulary_overlap": 0.44155844155844154,
+        "exception": "TypeError",
+        "features": [
+          {
+            "token": "1",
+            "contribution": 0.3523992058439068
+          },
+          {
+            "token": "x typeerror",
+            "contribution": 0.2892044328513335
+          },
+          {
+            "token": "0",
+            "contribution": 0.17084299087917532
+          },
+          {
+            "token": "typeerror",
+            "contribution": 0.12808691804641997
+          },
+          {
+            "token": "solve 0",
+            "contribution": 0.10491296698933328
+          },
+          {
+            "token": "2",
+            "contribution": 0.08147738222996316
+          },
+          {
+            "token": "solve return",
+            "contribution": 0.058549785010430955
+          },
+          {
+            "token": "return",
+            "contribution": 0.058549785010430955
+          }
+        ],
+        "note": "Sigmoid-calibrated on held-out programs. Scores and rejection rules remain imperfect; tests decide patch acceptance."
+      },
+      "reason": null
+    },
+    {
+      "program": "decorate",
+      "label": "wrong_argument_count",
+      "guided": false,
+      "status": "needs_review",
+      "attempts": 6,
+      "seconds": 0.466,
+      "visible_tests_passed": false,
+      "heldout_tests_passed": null,
+      "hidden_input_count": 4,
+      "prediction": {
+        "label": "wrong_argument_count",
+        "score": 0.8896392243202549,
+        "ranking": [
+          {
+            "label": "wrong_argument_count",
+            "score": 0.8896392243202549
+          },
+          {
+            "label": "missing_mapping_key",
+            "score": 0.026909723907844962
+          },
+          {
+            "label": "missing_none_guard",
+            "score": 0.02380668811901844
+          },
+          {
+            "label": "type_conversion",
+            "score": 0.022858135246879033
+          },
+          {
+            "label": "zero_denominator",
+            "score": 0.022263653027652673
+          },
+          {
+            "label": "index_boundary",
+            "score": 0.014522575378349943
+          }
+        ],
+        "decision": "supported",
+        "reasons": [],
+        "threshold": 0.25,
+        "vocabulary_overlap": 0.5185185185185185,
+        "exception": "TypeError",
+        "features": [
+          {
+            "token": "1",
+            "contribution": 0.33037412435785757
+          },
+          {
+            "token": "required positional",
+            "contribution": 0.29297466841601616
+          },
+          {
+            "token": "missing 1",
+            "contribution": 0.29297466841601616
+          },
+          {
+            "token": "1 required",
+            "contribution": 0.29297466841601616
+          },
+          {
+            "token": "missing",
+            "contribution": 0.29040847822569305
+          },
+          {
+            "token": "required",
+            "contribution": 0.29040847822569305
+          },
+          {
+            "token": "positional argument",
+            "contribution": 0.2880450869726484
+          },
+          {
+            "token": "positional",
+            "contribution": 0.2880450869726484
+          }
+        ],
+        "note": "Sigmoid-calibrated on held-out programs. Scores and rejection rules remain imperfect; tests decide patch acceptance."
+      },
+      "reason": "No candidate passed the unchanged verification tests within the budget."
+    },
+    {
+      "program": "decorate",
+      "label": "wrong_argument_count",
+      "guided": true,
+      "status": "needs_review",
+      "attempts": 6,
+      "seconds": 0.462,
+      "visible_tests_passed": false,
+      "heldout_tests_passed": null,
+      "hidden_input_count": 4,
+      "prediction": {
+        "label": "wrong_argument_count",
+        "score": 0.8896392243202549,
+        "ranking": [
+          {
+            "label": "wrong_argument_count",
+            "score": 0.8896392243202549
+          },
+          {
+            "label": "missing_mapping_key",
+            "score": 0.026909723907844962
+          },
+          {
+            "label": "missing_none_guard",
+            "score": 0.02380668811901844
+          },
+          {
+            "label": "type_conversion",
+            "score": 0.022858135246879033
+          },
+          {
+            "label": "zero_denominator",
+            "score": 0.022263653027652673
+          },
+          {
+            "label": "index_boundary",
+            "score": 0.014522575378349943
+          }
+        ],
+        "decision": "supported",
+        "reasons": [],
+        "threshold": 0.25,
+        "vocabulary_overlap": 0.5185185185185185,
+        "exception": "TypeError",
+        "features": [
+          {
+            "token": "1",
+            "contribution": 0.33037412435785757
+          },
+          {
+            "token": "required positional",
+            "contribution": 0.29297466841601616
+          },
+          {
+            "token": "missing 1",
+            "contribution": 0.29297466841601616
+          },
+          {
+            "token": "1 required",
+            "contribution": 0.29297466841601616
+          },
+          {
+            "token": "missing",
+            "contribution": 0.29040847822569305
+          },
+          {
+            "token": "required",
+            "contribution": 0.29040847822569305
+          },
+          {
+            "token": "positional argument",
+            "contribution": 0.2880450869726484
+          },
+          {
+            "token": "positional",
+            "contribution": 0.2880450869726484
+          }
+        ],
+        "note": "Sigmoid-calibrated on held-out programs. Scores and rejection rules remain imperfect; tests decide patch acceptance."
+      },
+      "reason": "No candidate passed the unchanged verification tests within the budget."
+    }
+  ],
+  "limitations": [
+    "Same original programs, provider, tests and attempt budget in each arm.",
+    "Offline comparison measures classifier-guided ordering/pruning of hand-written AST rules, not Gemini quality.",
+    "Held-out input cases come from the same authored program; they are not independent real-world bugs.",
+    "Missing-None examples have no separate hidden triggering input; hidden result is null.",
+    "No hypothesis test is justified by this small paired sample."
+  ]
+}

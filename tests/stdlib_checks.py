@@ -42,7 +42,7 @@ class CoreChecks(unittest.TestCase):
     def test_invalid_patch(self):
         self.assertEqual(self.fix(proposer=lambda *args:'def bad(')['status'],'needs_review')
     def test_retry_limit(self):
-        with self.assertRaises(ValueError): self.fix(retries=6)
+        with self.assertRaises(ValueError): self.fix(retries=13)
     def test_missing_test(self):
         with self.assertRaises(ValueError): repair(SOURCE,'pass','unused',contract='test')
     def test_splits(self):

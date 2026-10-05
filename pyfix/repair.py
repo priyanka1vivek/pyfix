@@ -40,45 +40,50 @@ SOURCE:\n{source}\nTRACEBACK:\n{traceback}'''
     return result+'\n'
 
 def offline_patch(source, traceback, label, contract):
-    """Narrow, transparent demonstration rule, not a general repair system."""
-    tree = ast.parse(source)
-    if label != 'type_conversion': raise ValueError('Offline strategy supports numeric-string addition only; use Gemini for other cases.')
-    class NumericAddition(ast.NodeTransformer):
-        def visit_BinOp(self,node):
-            self.generic_visit(node)
-            if isinstance(node.op,ast.Add) and isinstance(node.left,ast.Name) and isinstance(node.right,ast.Constant) and isinstance(node.right.value,(int,float)):
-                node.left = ast.Call(func=ast.Name(id='float',ctx=ast.Load()),args=[node.left],keywords=[])
-            return node
-    return ast.unparse(ast.fix_missing_locations(NumericAddition().visit(tree)))+'\n'
+    from .proposals import candidates
+    proposals=candidates(source,label)
+    if not proposals: raise ValueError('No supported AST proposal for this source and category.')
+    return proposals[0]['source']
 
-def repair(source, tests, artifact, *, contract, backend='docker', provider='offline', retries=3, proposer=None, test_framework='pytest'):
+def repair(source, tests, artifact, *, contract, backend='docker', provider='offline', retries=6, proposer=None, test_framework='pytest', guided=True, allow_uncertain=False):
+    from .proposals import ordered_candidates
+    import time
     if not tests.strip() or not contract.strip(): raise ValueError('Independent tests and a behavior contract are required.')
-    if not 1 <= retries <= 5: raise ValueError('Retries must be 1–5')
-    ast.parse(source); test_tree = ast.parse(tests)
+    if not 1 <= retries <= 12: raise ValueError('Retries must be 1–12')
+    ast.parse(source); test_tree=ast.parse(tests)
     if not any(isinstance(n,(ast.FunctionDef,ast.AsyncFunctionDef)) and n.name.startswith('test_') for n in ast.walk(test_tree)):
-        raise ValueError('Provide at least one pytest test function.')
-    if provider not in {'offline','gemini'}: raise ValueError('Unknown provider')
-    propose = proposer or (offline_patch if provider == 'offline' else gemini_patch)
-    if test_framework == 'unittest' and not any(isinstance(n,ast.ClassDef) and any(isinstance(b,ast.Attribute) and b.attr == 'TestCase' for b in n.bases) for n in ast.walk(test_tree)):
+        raise ValueError('Provide at least one named test function.')
+    if provider not in {'offline','gemini'}:raise ValueError('Unknown provider')
+    if test_framework=='unittest' and not any(isinstance(n,ast.ClassDef) and any(isinstance(b,ast.Attribute) and b.attr=='TestCase' for b in n.bases) for n in ast.walk(test_tree)):
         raise ValueError('unittest requires a unittest.TestCase subclass')
-    original = source; attempts = []; seen = {source}
-    result = run_code(source,tests,backend=backend,test_framework=test_framework)
-    if result.passed: return dict(status='already_passing',source=source,attempts=[],verification=result.dict(),diff='')
+    original=source;attempts=[];seen={ast.unparse(ast.parse(source))};started=time.monotonic()
+    initial=run_code(source,tests,backend=backend,test_framework=test_framework)
+    if initial.passed:return dict(status='already_passing',source=source,attempts=[],verification=initial.dict(),diff='',seconds=time.monotonic()-started)
+    if initial.timed_out:return dict(status='needs_review',source=source,attempts=[],verification=initial.dict(),diff='',reason='Initial execution timed out; automatic repair was not attempted.')
+    trace=initial.stdout+'\n'+initial.stderr
+    prediction=predict(trace,artifact)
+    if guided and prediction['decision']=='needs_review' and not allow_uncertain:
+        return dict(status='needs_review',source=original,attempts=[],verification=initial.dict(),diff='',prediction=prediction,reason='Diagnosis is uncertain or outside the supported taxonomy. Review it before requesting proposals.')
+    proposals=ordered_candidates(source,prediction['label'],guided=guided) if provider=='offline' and proposer is None else None
+    result=initial;current=source
     for i in range(retries):
-        trace = result.stdout+'\n'+result.stderr
-        prediction = predict(trace,artifact)
-        item = {'attempt':i+1,'prediction':prediction,'before':result.dict()}
+        item={'attempt':i+1,'prediction':prediction,'before':result.dict()}
         try:
-            candidate = propose(source,trace,prediction['label'],contract)
-            ast.parse(candidate)
-            if candidate in seen: raise ValueError('Repeated candidate; stopping to avoid a loop.')
-            seen.add(candidate)
-            checked = run_code(candidate,tests,backend=backend,test_framework=test_framework)
-        except (ValueError,SyntaxError,urllib.error.URLError) as exc:
-            item['error'] = str(exc); attempts.append(item); break
-        item.update(passed=checked.passed,after=checked.dict(),diff=''.join(difflib.unified_diff(source.splitlines(True),candidate.splitlines(True),fromfile='before.py',tofile='candidate.py')))
+            if proposals is not None:
+                if i>=len(proposals):break
+                proposal=proposals[i];candidate=proposal['source'];item['reason']=proposal['reason'];item['strategy']=proposal['strategy']
+            else:
+                # Unguided uses the same API model and budget, with no predicted-category hint.
+                candidate=(proposer or gemini_patch)(current,trace,prediction['label'] if guided else 'unknown',contract)
+            ast.parse(candidate);canonical=ast.unparse(ast.parse(candidate))
+            if canonical in seen:raise ValueError('Repeated candidate; stopping to avoid a loop.')
+            seen.add(canonical)
+            checked=run_code(candidate,tests,backend=backend,test_framework=test_framework)
+        except (ValueError,SyntaxError,urllib.error.URLError,TimeoutError) as exc:
+            item['error']=str(exc);attempts.append(item);break
+        item.update(passed=checked.passed,after=checked.dict(),diff=''.join(difflib.unified_diff(original.splitlines(True),candidate.splitlines(True),fromfile='original.py',tofile='candidate.py')))
         attempts.append(item)
         if checked.passed:
-            return dict(status='tests_passed',source=candidate,attempts=attempts,verification=checked.dict(),diff=''.join(difflib.unified_diff(original.splitlines(True),candidate.splitlines(True),fromfile='original.py',tofile='repaired.py')))
-        source, result = candidate, checked
-    return dict(status='needs_review',source=original,attempts=attempts,verification=result.dict(),diff='')
+            return dict(status='tests_passed',source=candidate,attempts=attempts,verification=checked.dict(),diff=item['diff'],prediction=prediction,seconds=round(time.monotonic()-started,3),provider=provider)
+        current,result=candidate,checked;trace=result.stdout+'\n'+result.stderr
+    return dict(status='needs_review',source=original,attempts=attempts,verification=initial.dict(),last_candidate_verification=result.dict(),diff='',prediction=prediction,seconds=round(time.monotonic()-started,3),reason='No candidate passed the unchanged verification tests within the budget.')

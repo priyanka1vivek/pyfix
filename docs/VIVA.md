@@ -28,3 +28,11 @@
 **Is this novel?** It is an applied ML project combining synthetic mutation data, comparative classification and verified repair. Do not claim that classifying bugs or verifying repairs is absent from existing research/tools.
 
 **What did you build and understand?** Explain each module, execute it, and change a mutation or a test yourself. If required by your institution, disclose AI assistance. Do not claim unaided authorship or results you have not reproduced.
+
+## Version 2 additions
+- Calibration has its own six-program partition; model selection uses a different validation partition. Neither contains test programs.
+- Show the feature ablation before claiming source context helps. Extra context can reduce performance; the measured result decides.
+- Explain review decisions: unsupported exception, low vocabulary overlap, score threshold or close top-two scores. These are imperfect safeguards.
+- The repair benchmark compares hand-written AST rules with and without category guidance, not two trained code-generation systems. Fixed candidate order influences the result.
+- Withheld input tests are additional fixtures from the same program; they are not independent real-world code.
+- QuixBugs tests scope limits. RecursionError/AssertionError are outside the six supported categories, so rejection is appropriate. It is not an external in-taxonomy accuracy result.

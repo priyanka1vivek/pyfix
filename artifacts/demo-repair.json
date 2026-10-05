@@ -1,64 +1,177 @@
 {
   "status": "tests_passed",
-  "source": "def add_fee(amount):\n    return float(amount) + 2\n",
+  "source": "def solve(x):\n    return float(x) + 2\n",
   "attempts": [
     {
       "attempt": 1,
       "prediction": {
         "label": "type_conversion",
-        "score": 0.7734535941306954,
+        "score": 0.8641206499763212,
         "ranking": [
           {
             "label": "type_conversion",
-            "score": 0.7734535941306954
+            "score": 0.8641206499763212
           },
           {
             "label": "wrong_argument_count",
-            "score": 0.05795743221647187
+            "score": 0.03222246949099245
           },
           {
             "label": "missing_mapping_key",
-            "score": 0.045276417297273754
-          },
-          {
-            "label": "zero_denominator",
-            "score": 0.043813892558679075
+            "score": 0.02969441206367602
           },
           {
             "label": "missing_none_guard",
-            "score": 0.04064910300856633
+            "score": 0.02964369522516083
+          },
+          {
+            "label": "zero_denominator",
+            "score": 0.025220125742674265
           },
           {
             "label": "index_boundary",
-            "score": 0.03884956078831361
+            "score": 0.019098647501175254
           }
         ],
-        "note": "Model scores are not calibrated confidence; unsupported bugs may be misclassified."
+        "decision": "supported",
+        "reasons": [],
+        "threshold": 0.25,
+        "vocabulary_overlap": 0.6097560975609756,
+        "exception": "TypeError",
+        "features": [
+          {
+            "token": "str",
+            "contribution": 0.3889045463937574
+          },
+          {
+            "token": "int",
+            "contribution": 0.21453935511944475
+          },
+          {
+            "token": "only concatenate",
+            "contribution": 0.19668143129523524
+          },
+          {
+            "token": "to str",
+            "contribution": 0.19668143129523524
+          },
+          {
+            "token": "typeerror can",
+            "contribution": 0.19668143129523524
+          },
+          {
+            "token": "not int",
+            "contribution": 0.19668143129523524
+          },
+          {
+            "token": "can only",
+            "contribution": 0.19668143129523524
+          },
+          {
+            "token": "can",
+            "contribution": 0.19668143129523524
+          }
+        ],
+        "note": "Sigmoid-calibrated on held-out programs. Scores and rejection rules remain imperfect; tests decide patch acceptance."
       },
       "before": {
         "returncode": 1,
         "stdout": "",
-        "stderr": "test_numeric (test_candidate.TestFee.test_numeric) ... ERROR\n\n======================================================================\nERROR: test_numeric (test_candidate.TestFee.test_numeric)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/tmp/pyfix-qnfbzatt/test_candidate.py\", line 5, in test_numeric\n    self.assertEqual(add_fee('7'),9)\n                     ^^^^^^^^^^^^\n  File \"/tmp/pyfix-qnfbzatt/candidate.py\", line 2, in add_fee\n    return amount + 2\n           ~~~~~~~^~~\nTypeError: can only concatenate str (not \"int\") to str\n\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nFAILED (errors=1)\n",
+        "stderr": "test_contract (test_candidate.Check.test_contract) ... ERROR\n\n======================================================================\nERROR: test_contract (test_candidate.Check.test_contract)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/tmp/pyfix-smaktry_/test_candidate.py\", line 5, in test_contract\n    assert solve('7') == 9\n           ^^^^^^^^^^\n  File \"/tmp/pyfix-smaktry_/candidate.py\", line 2, in solve\n    return x + 2\n           ~~^~~\nTypeError: can only concatenate str (not \"int\") to str\n\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nFAILED (errors=1)\n",
         "timed_out": false,
-        "seconds": 0.0639
+        "seconds": 0.064
       },
+      "reason": "Convert x with float at the arithmetic boundary.",
+      "strategy": "type_conversion",
       "passed": true,
       "after": {
         "returncode": 0,
         "stdout": "",
-        "stderr": "test_numeric (test_candidate.TestFee.test_numeric) ... ok\n\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nOK\n",
+        "stderr": "test_contract (test_candidate.Check.test_contract) ... ok\n\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nOK\n",
         "timed_out": false,
-        "seconds": 0.0639
+        "seconds": 0.0641
       },
-      "diff": "--- before.py\n+++ candidate.py\n@@ -1,2 +1,2 @@\n def add_fee(amount):\n-    return amount + 2\n+    return float(amount) + 2\n"
+      "diff": "--- original.py\n+++ candidate.py\n@@ -1,2 +1,2 @@\n def solve(x):\n-    return x + 2\n+    return float(x) + 2\n"
     }
   ],
   "verification": {
     "returncode": 0,
     "stdout": "",
-    "stderr": "test_numeric (test_candidate.TestFee.test_numeric) ... ok\n\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nOK\n",
+    "stderr": "test_contract (test_candidate.Check.test_contract) ... ok\n\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nOK\n",
     "timed_out": false,
-    "seconds": 0.0639
+    "seconds": 0.0641
   },
-  "diff": "--- original.py\n+++ repaired.py\n@@ -1,2 +1,2 @@\n def add_fee(amount):\n-    return amount + 2\n+    return float(amount) + 2\n"
+  "diff": "--- original.py\n+++ candidate.py\n@@ -1,2 +1,2 @@\n def solve(x):\n-    return x + 2\n+    return float(x) + 2\n",
+  "prediction": {
+    "label": "type_conversion",
+    "score": 0.8641206499763212,
+    "ranking": [
+      {
+        "label": "type_conversion",
+        "score": 0.8641206499763212
+      },
+      {
+        "label": "wrong_argument_count",
+        "score": 0.03222246949099245
+      },
+      {
+        "label": "missing_mapping_key",
+        "score": 0.02969441206367602
+      },
+      {
+        "label": "missing_none_guard",
+        "score": 0.02964369522516083
+      },
+      {
+        "label": "zero_denominator",
+        "score": 0.025220125742674265
+      },
+      {
+        "label": "index_boundary",
+        "score": 0.019098647501175254
+      }
+    ],
+    "decision": "supported",
+    "reasons": [],
+    "threshold": 0.25,
+    "vocabulary_overlap": 0.6097560975609756,
+    "exception": "TypeError",
+    "features": [
+      {
+        "token": "str",
+        "contribution": 0.3889045463937574
+      },
+      {
+        "token": "int",
+        "contribution": 0.21453935511944475
+      },
+      {
+        "token": "only concatenate",
+        "contribution": 0.19668143129523524
+      },
+      {
+        "token": "to str",
+        "contribution": 0.19668143129523524
+      },
+      {
+        "token": "typeerror can",
+        "contribution": 0.19668143129523524
+      },
+      {
+        "token": "not int",
+        "contribution": 0.19668143129523524
+      },
+      {
+        "token": "can only",
+        "contribution": 0.19668143129523524
+      },
+      {
+        "token": "can",
+        "contribution": 0.19668143129523524
+      }
+    ],
+    "note": "Sigmoid-calibrated on held-out programs. Scores and rejection rules remain imperfect; tests decide patch acceptance."
+  },
+  "seconds": 0.136,
+  "provider": "offline"
 }

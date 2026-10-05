@@ -1,119 +1,117 @@
-# PyFix
+# PyFix · Research Workspace
 ### Traceback-Based Bug Classification for Automated Python Repair
 
-A reproducible ML project that generates labelled Python failures, compares five classifiers, and uses the predicted bug category to guide a test-verified repair loop. Includes a FastAPI web workspace, CLI, offline demonstration, optional Gemini patch generation, experiment outputs and automated tests.
+A Python ML project with an inspectable repair studio, calibrated bug-category predictions, controlled feature experiments, and test-verified candidate search.
 
-**Build status:** Dataset generation, model training and all 11 pytest tests (including FastAPI integration) passed on [GitHub Actions](https://github.com/priyanka1vivek/pyfix/actions/runs/37267046220). Ten additional core checks passed locally. Docker, live Gemini and browser visual checks remain outstanding; see [validation status](docs/VALIDATION.md).
+**Version 2:** 48 authored task programs, four disjoint program partitions, five classifier comparisons, three feature ablations, uncertainty checks, six AST repair families, paired repair experiments, and an external QuixBugs scope challenge. This is a small research prototype; synthetic scores are not production accuracy.
 
-## Quick start — Windows / VS Code
+## Run it on Windows
 
-Use Python 3.11 or newer. Open a terminal in this project folder.
+Download this repository with **Code → Download ZIP**, extract it and open the folder containing `requirements.txt` in VS Code. In its terminal:
 
 ```powershell
-python -m venv .venv
-.venv\Scripts\Activate.ps1
-python -m pip install -r requirements.txt
+py -3.11 -m venv .venv
+.\.venv\Scripts\python.exe -m pip install -r requirements.txt
+.\.venv\Scripts\python.exe -m pyfix.cli generate
+.\.venv\Scripts\python.exe -m pyfix.cli train
+.\.venv\Scripts\python.exe -m pyfix.cli benchmark
+$env:PYFIX_RUNNER="trusted"
+.\.venv\Scripts\python.exe -m pyfix.cli serve
+```
+
+Open **http://localhost:8000**. No API key is required for local AST repair. Select any of the six examples and run the experiment. `trusted` executes code on your computer: use only code and tests you trust. Stop the server with Ctrl+C. Use Python 3.11 or newer; if 3.11 is not installed, substitute `py` for `py -3.11` after checking your version.
+
+macOS/Linux:
+
+```sh
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
 python -m pyfix.cli generate
 python -m pyfix.cli train
-python -m pytest -q
+python -m pyfix.cli benchmark
+PYFIX_RUNNER=trusted python -m pyfix.cli serve
 ```
 
-On macOS/Linux activate with `source .venv/bin/activate`.
+## Explore the UI
 
-### Run the built-in demonstration
+- **Repair studio:** six examples, source and immutable external tests, behavior contract, attempt budget, optional manual override for uncertain diagnoses, patch diffs, verification history, downloadable audit JSON.
+- **Traceback diagnosis:** ranked calibrated scores, rejection reasons, vocabulary overlap and supporting text features. A feature contribution is not a causal explanation.
+- **Model experiments:** all five models, program bootstrap intervals, exception-only/traceback/traceback-plus-code ablations, Brier scores and log loss.
+- **Repair benchmark:** classifier-guided versus unguided AST candidate search under identical budgets, with additional withheld input checks.
+- **Prediction explorer:** inspect individual correct/incorrect and accepted/review predictions.
 
-For your own trusted example files only, PowerShell:
+## What is ML, and what is not?
 
-```powershell
-$env:PYFIX_RUNNER="trusted"
-python -m pyfix.cli serve
-```
+The learned component is TF-IDF text classification. Naive Bayes, logistic regression, linear SVM, random forest and AdaBoost are compared. Separate held-out programs fit sigmoid calibration. Validation macro F1 selects the classifier; the test split is reserved for final reporting.
 
-macOS/Linux: `PYFIX_RUNNER=trusted python -m pyfix.cli serve`.
+Local repair is an explicit AST search over six edit families. The classifier restricts candidate generation to its predicted category. Uncertain or unsupported failures stop for review by default. Gemini can instead propose code using the predicted class and behavior contract. Neither repair provider is presented as a newly trained generative model.
 
-Open **http://localhost:8000**. The numeric-string example loads automatically. Click **Classify & attempt repair**. The offline rule attempts numeric conversion and accepts the patch only if all supplied tests pass. No API key is needed for this demo. Trusted mode executes Python on your machine; only use code and tests you trust.
+## Dataset and experiments
 
-### Docker execution (default for submitted code)
+`pyfix/catalog.py` defines 48 small task programs: invoices, temperature conversion, stock updates, optional fields, list traversals, ratios, helper calls and more. Each has a working implementation, a single mutation and input fixtures. Every clean program must run and every retained mutant must fail. Repeated inputs are deduplicated; the default corpus has **321 records**, not an artificially inflated count of renamed clones.
 
-Install/start Docker Desktop or Docker Engine, then:
+| Partition | Programs | Purpose |
+|---|---:|---|
+| Training | 24 | Fit TF-IDF and classifiers |
+| Calibration | 6 | Fit sigmoid score calibration |
+| Validation | 6 | Choose model and score threshold |
+| Test | 12 | Report held-out results |
+
+Inputs from one program stay together. Program IDs and exact module-source overlap are checked across partitions. The programs share mutation patterns, so this is not a guarantee against all semantic similarity. Source metadata, clean implementations and mutation labels never enter traceback-only classifier features.
+
+**Feature ablation:** fixed logistic regression on exception text only, full traceback, and traceback plus broken module source. This shows what additional context contributes on this corpus, even if extra source does not improve the score.
+
+**Calibration:** report multiclass Brier score and log loss before/after calibration. Only six independent calibration programs are available; calibrated scores still have substantial uncertainty.
+
+**Selective prediction:** validation chooses a score threshold targeting at least 85% empirical accuracy at maximum coverage. An ambiguity margin, supported-exception list and vocabulary overlap check also apply. These rules can reject valid examples or accept unsupported ones. They are not a general unknown-bug detector.
+
+**Repair ablation:** 12 held-out programs, same six-candidate budget, provider and visible tests for guided/unguided arms. Local guidance changes strategy selection; unguided candidates follow a fixed class ordering. This is sensitive to that ordering and does not establish an advantage over every alternative search policy. Additional withheld inputs are checked after a candidate passes; programs with only a None trigger have no separate hidden input and report null.
+
+**External challenge:** four pinned, MIT-licensed QuixBugs tasks with upstream tests. Recursion and semantic failures lie outside the six labels. Report rejection behavior separately; do not describe these as production bugs or claim root-cause classification accuracy for them. See `benchmarks/quixbugs/PROVENANCE.md` and the retained upstream license.
+
+## Docker execution
+
+Docker is the default execution backend for submitted source. Install/start Docker, then:
 
 ```sh
 docker build -f Dockerfile.runner -t pyfix-runner:1 .
-python -m pyfix.cli serve
 ```
 
-Ensure `PYFIX_RUNNER` is unset or set to `docker`. Each execution has no network, a read-only root filesystem and code mount, an unprivileged user, dropped capabilities, resource limits and a timeout. This is a local educational prototype, not a hardened multi-tenant service. Docker shares the host kernel; do not expose this app publicly. The trusted runner is not a sandbox. Captured output is capped when read; output files are not quota-limited, so hostile output flooding is outside this prototype's hardening scope.
+Unset `PYFIX_RUNNER` or set it to `docker`, then start the server. Each run has no network, an unprivileged user, read-only code/root mounts, dropped capabilities, process/memory/CPU limits, and a timeout. This is not a hardened public multi-user sandbox. Captured output is capped when read, but backing output files are not quota-limited. Keep the API local. Python code can interfere with its own test process; unchanged test files alone do not make verification adversary-proof.
 
-### Gemini repair
+## Gemini
 
-Copy `.env.example` to `.env`. Set `GEMINI_API_KEY` and `GEMINI_MODEL` to a model supported by your Google account. Restart the app and select Gemini. Never commit `.env`. Source code, traceback/test failure output and your behavior contract are sent to Google's API; test failure output may contain portions of tests. Independent tests are never replaced by a generated patch. API costs and availability depend on your account. A live Gemini request requires your own key; the delivered project does not include one.
+Copy `.env.example` to `.env`, set `GEMINI_API_KEY` and `GEMINI_MODEL` to values valid for your Google account, and restart. Choose Gemini in the UI. Never commit the key. Source, contract and failure output are sent to Google; failure output can contain test fragments. The independent test file itself is not rewritten by proposals. Live Gemini and guided-versus-unguided Gemini evaluation require your credentials and have not been claimed as measured results.
 
-## What is implemented
-
-- Six mutation labels: type conversion, missing None guard, index boundary, missing mapping key, zero denominator and wrong argument count.
-- 36 seed expression families, wrapped in working functions and verified by execution before mutation records are admitted.
-- Reproducible generation, clean/broken source provenance, captured tracebacks and deterministic family-separated train/validation/test partitions.
-- TF-IDF with Naive Bayes, logistic regression, linear SVM, random forest and AdaBoost.
-- Model selection by validation macro F1; accuracy, macro precision/recall/F1, per-class reports and confusion matrices on held-out test families.
-- Majority and exception-only baselines. These test whether ML adds information beyond the exception name.
-- Training-fitted two-dimensional PCA plot of held-out samples. PCA is descriptive; classifiers use nonnegative sparse TF-IDF, avoiding invalid negative PCA inputs to MultinomialNB.
-- Category-guided patching, external pytest verification, bounded retries, repeated-candidate detection, original-source retention on failure and unified diffs.
-- Local frontend, REST API, CLI and GitHub Actions workflow.
-
-## Reproduce the experiment
+## Reproduce and test
 
 ```sh
-python -m pyfix.cli generate --variants 12
+python -m pyfix.cli generate
 python -m pyfix.cli train
+python -m pyfix.cli benchmark
+python -m unittest discover -s tests -p stdlib_checks.py -v
 python -m pytest -q
 ```
 
-The generator removes duplicate source strings. The final count is therefore below 432 and is recorded in `artifacts/metrics.json`. Four expression families per class train the models; one is validation and one is test. Random renaming does not cross these family boundaries. Vectorizers and PCA fit only on training data. The selected model is not refitted on validation, ensuring the shipped model reproduces the displayed test result. No inference is made from filename or label metadata.
+Set `PYFIX_TEST_DOCKER=1` to enable Docker integration tests after building the runner. GitHub Actions performs installation, generation, training, benchmark execution, core checks, pytest, Docker verification and a real-browser desktop/mobile check. It uploads experiment reports and screenshots as the `experiment-results` artifact. A workflow file is not evidence of success; inspect the latest run and [validation notes](docs/VALIDATION.md).
 
-Files in `artifacts/`: `metrics.json`, `comparison.csv`, `classification_report.json`, five confusion matrices, `pca.png`, and a locally generated `model.joblib`. Do not load joblib artifacts from unknown sources. Git ignores the model binary; rerun training after cloning.
+Model binaries are ignored by Git: train after cloning, and retrain after pulling a new version. Load only trusted joblib artifacts.
 
-## CLI
+## Files
 
-```sh
-pyfix classify traceback.txt
-pyfix repair example.py --tests test_example.py --contract "Numeric inputs plus 2" --provider gemini
-```
+| File | Role |
+|---|---|
+| `pyfix/catalog.py`, `dataset.py` | Programs, fixtures, mutations, provenance |
+| `pyfix/training.py` | Models, calibration, selection, ablations, error reports |
+| `pyfix/proposals.py`, `repair.py` | Independent AST edits, optional Gemini, verified attempts |
+| `pyfix/runner.py` | Docker/trusted process execution |
+| `pyfix/benchmark.py` | Paired repair experiment and external challenge |
+| `pyfix/app.py`, `static/` | Local API and interface |
+| `tests/`, `scripts/browser_check.py` | Behavioral, Docker and browser checks |
+| `artifacts/` | Actual measured reports and plots |
+| `benchmarks/quixbugs/` | Pinned external code, upstream tests and license |
 
-The repair command writes a JSON audit record and returns exit code 1 when review is needed. It does not overwrite your input file. This enables a CI integration, but the repository does not automatically edit or commit arbitrary failing builds. The included workflow verifies this project's own reproducibility and tests.
+## Presentation and honest claims
 
-## Project structure
-
-```text
-pyfix/
-  dataset.py       mutation recipes, execution and provenance
-  runner.py        Docker/trusted execution and timeout handling
-  training.py      training, selection, baselines and plots
-  repair.py        class-guided proposals and verification loop
-  app.py           local REST API
-  cli.py           command-line entry point
-  static/          HTML, CSS, JavaScript interface
- tests/            behavioral and integration checks
- docs/             methodology, assessment summary and viva guide
- data/             generated labelled examples
- artifacts/        measured results and plots
-```
-
-## Limits that matter
-
-This is a controlled synthetic benchmark, not evidence of production repair accuracy. Six families per label are small; variant names are not independent real programs. Exception types strongly reveal some labels. Some distinct root causes have indistinguishable tracebacks. The classifier always chooses from known labels and its scores are not calibrated; unsupported failures require review. The offline patcher supports one narrow numeric conversion demonstration. Gemini proposals can fail or overfit tests. Passing tests does not prove semantic correctness. Test files are fixed outside the patch, but adversarial Python can interfere with a test harness; this system does not claim malicious-candidate-proof verification.
-
-A meaningful extension is a separately curated real-bug dataset and a controlled comparison of class-guided versus unguided repair, with identical models, test suites and budgets. That experiment has not been claimed as completed.
-
-See [methodology](docs/METHODOLOGY.md), [viva guide](docs/VIVA.md), and [assessment wording](docs/ASSESSMENT.md).
-
-## Reference documentation
-
-- https://scikit-learn.org/stable/modules/feature_extraction.html#text-feature-extraction
-- https://scikit-learn.org/stable/modules/generated/sklearn.naive_bayes.MultinomialNB.html
-- https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.PCA.html
-- https://ai.google.dev/api/generate-content
-- https://docs.pytest.org/en/stable/
-
-## Dependency-light core verification
-
-The repair API also supports `test_framework="unittest"`. With the ML dependencies installed, run `python -m unittest discover -s tests -p stdlib_checks.py -v`. The browser and CLI use pytest by default. This check does not substitute for HTTP or Docker integration tests.
+The strongest demonstration is a traceable chain from failing tests to model prediction, candidate diff and verified outcome, backed by a controlled comparison. Do not claim perfect generalization, novelty of automated repair, or correctness proved by a passing test suite. See [methodology](docs/METHODOLOGY.md), [assessment text](docs/ASSESSMENT.md) and [viva guide](docs/VIVA.md).

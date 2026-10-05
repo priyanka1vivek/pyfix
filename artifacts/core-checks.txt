@@ -10,6 +10,6 @@ test_splits (stdlib_checks.CoreChecks.test_splits) ... ok
 test_timeout (stdlib_checks.CoreChecks.test_timeout) ... ok
 
 ----------------------------------------------------------------------
-Ran 10 tests in 0.506s
+Ran 10 tests in 0.547s
 
 OK

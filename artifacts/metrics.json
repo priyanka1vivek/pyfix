@@ -1,20 +1,38 @@
 {
-  "selected_model": "Logistic regression",
-  "selection": "Highest validation macro F1; test untouched during selection",
+  "version": 2,
+  "selected_model": "Naive Bayes",
+  "selection": "Validation macro F1; calibration uses a separate program partition.",
   "rows": [
     {
       "model": "Naive Bayes",
       "validation": {
-        "accuracy": 0.9705882352941176,
-        "precision_macro": 0.9743589743589745,
-        "recall_macro": 0.9722222222222223,
-        "f1_macro": 0.970959595959596
+        "accuracy": 1.0,
+        "precision_macro": 1.0,
+        "recall_macro": 1.0,
+        "f1_macro": 1.0
       },
       "test": {
-        "accuracy": 0.9436619718309859,
-        "precision_macro": 0.9583333333333334,
-        "recall_macro": 0.9444444444444445,
-        "f1_macro": 0.942857142857143
+        "accuracy": 1.0,
+        "precision_macro": 1.0,
+        "recall_macro": 1.0,
+        "f1_macro": 1.0
+      },
+      "program_accuracy": {
+        "mean": 1.0,
+        "lower": 1.0,
+        "upper": 1.0,
+        "unit": "program",
+        "programs": 12
+      },
+      "calibration": {
+        "before": {
+          "log_loss": 0.24008852929191768,
+          "brier_multiclass": 0.09205475807824957
+        },
+        "after": {
+          "log_loss": 0.16533791598563394,
+          "brier_multiclass": 0.03450382308447815
+        }
       }
     },
     {
@@ -30,6 +48,23 @@
         "precision_macro": 1.0,
         "recall_macro": 1.0,
         "f1_macro": 1.0
+      },
+      "program_accuracy": {
+        "mean": 1.0,
+        "lower": 1.0,
+        "upper": 1.0,
+        "unit": "program",
+        "programs": 12
+      },
+      "calibration": {
+        "before": {
+          "log_loss": 0.5784415200447126,
+          "brier_multiclass": 0.23749891691606523
+        },
+        "after": {
+          "log_loss": 0.1802570202060521,
+          "brier_multiclass": 0.04199897226300274
+        }
       }
     },
     {
@@ -45,57 +80,165 @@
         "precision_macro": 1.0,
         "recall_macro": 1.0,
         "f1_macro": 1.0
+      },
+      "program_accuracy": {
+        "mean": 1.0,
+        "lower": 1.0,
+        "upper": 1.0,
+        "unit": "program",
+        "programs": 12
+      },
+      "calibration": {
+        "before": {
+          "log_loss": 0.33347887946852717,
+          "brier_multiclass": 0.11584950553214761
+        },
+        "after": {
+          "log_loss": 0.24407289830172985,
+          "brier_multiclass": 0.07980120807677196
+        }
       }
     },
     {
       "model": "Random forest",
       "validation": {
-        "accuracy": 0.45588235294117646,
-        "precision_macro": 0.5408163265306123,
-        "recall_macro": 0.4343434343434343,
-        "f1_macro": 0.3870023419203747
+        "accuracy": 0.6341463414634146,
+        "precision_macro": 0.6439393939393939,
+        "recall_macro": 0.6875,
+        "f1_macro": 0.6222222222222222
       },
       "test": {
-        "accuracy": 0.5633802816901409,
-        "precision_macro": 0.5465116279069767,
-        "recall_macro": 0.5694444444444445,
-        "f1_macro": 0.5040998217468805
+        "accuracy": 0.8902439024390244,
+        "precision_macro": 0.9400000000000001,
+        "recall_macro": 0.90625,
+        "f1_macro": 0.8981972428419936
+      },
+      "program_accuracy": {
+        "mean": 0.90625,
+        "lower": 0.7395833333333334,
+        "upper": 1.0,
+        "unit": "program",
+        "programs": 12
+      },
+      "calibration": {
+        "before": {
+          "log_loss": 0.6566102225464112,
+          "brier_multiclass": 0.3532507621951219
+        },
+        "after": {
+          "log_loss": 0.4627346751920118,
+          "brier_multiclass": 0.22202966345448014
+        }
       }
     },
     {
       "model": "AdaBoost",
       "validation": {
-        "accuracy": 0.3382352941176471,
-        "precision_macro": 0.20175438596491227,
-        "recall_macro": 0.3333333333333333,
-        "f1_macro": 0.2246376811594203
+        "accuracy": 0.8048780487804879,
+        "precision_macro": 0.6851851851851851,
+        "recall_macro": 0.8333333333333334,
+        "f1_macro": 0.7000000000000001
       },
       "test": {
-        "accuracy": 0.323943661971831,
-        "precision_macro": 0.19999999999999998,
-        "recall_macro": 0.3333333333333333,
-        "f1_macro": 0.2222222222222222
+        "accuracy": 0.9024390243902439,
+        "precision_macro": 0.8666666666666667,
+        "recall_macro": 0.9166666666666666,
+        "f1_macro": 0.8333333333333334
+      },
+      "program_accuracy": {
+        "mean": 0.9166666666666666,
+        "lower": 0.75,
+        "upper": 1.0,
+        "unit": "program",
+        "programs": 12
+      },
+      "calibration": {
+        "before": {
+          "log_loss": 1.7555318339786035,
+          "brier_multiclass": 0.8211224673474146
+        },
+        "after": {
+          "log_loss": 0.3420042186539363,
+          "brier_multiclass": 0.11433773458155039
+        }
       }
     }
   ],
   "baselines": {
     "majority": {
-      "accuracy": 0.15492957746478872,
-      "precision_macro": 0.025821596244131453,
+      "accuracy": 0.1951219512195122,
+      "precision_macro": 0.032520325203252036,
       "recall_macro": 0.16666666666666666,
-      "f1_macro": 0.044715447154471545
+      "f1_macro": 0.05442176870748299
     },
     "exception_only": {
-      "accuracy": 0.8309859154929577,
+      "accuracy": 0.8048780487804879,
       "precision_macro": 0.75,
       "recall_macro": 0.8333333333333334,
       "f1_macro": 0.7777777777777777
     }
   },
+  "ablations": [
+    {
+      "features": "exception",
+      "model": "Logistic regression (uncalibrated, fixed)",
+      "validation": {
+        "accuracy": 0.7804878048780488,
+        "precision_macro": 0.5784313725490197,
+        "recall_macro": 0.6666666666666666,
+        "f1_macro": 0.6066666666666667
+      },
+      "test": {
+        "accuracy": 0.8048780487804879,
+        "precision_macro": 0.75,
+        "recall_macro": 0.8333333333333334,
+        "f1_macro": 0.7777777777777777
+      }
+    },
+    {
+      "features": "traceback",
+      "model": "Logistic regression (uncalibrated, fixed)",
+      "validation": {
+        "accuracy": 1.0,
+        "precision_macro": 1.0,
+        "recall_macro": 1.0,
+        "f1_macro": 1.0
+      },
+      "test": {
+        "accuracy": 1.0,
+        "precision_macro": 1.0,
+        "recall_macro": 1.0,
+        "f1_macro": 1.0
+      }
+    },
+    {
+      "features": "traceback_code",
+      "model": "Logistic regression (uncalibrated, fixed)",
+      "validation": {
+        "accuracy": 1.0,
+        "precision_macro": 1.0,
+        "recall_macro": 1.0,
+        "f1_macro": 1.0
+      },
+      "test": {
+        "accuracy": 1.0,
+        "precision_macro": 1.0,
+        "recall_macro": 1.0,
+        "f1_macro": 1.0
+      }
+    }
+  ],
   "counts": {
-    "train": 271,
-    "validation": 68,
-    "test": 71
+    "train": 157,
+    "calibration": 41,
+    "validation": 41,
+    "test": 82
+  },
+  "program_counts": {
+    "train": 24,
+    "calibration": 6,
+    "validation": 6,
+    "test": 12
   },
   "classes": [
     "index_boundary",
@@ -106,10 +249,164 @@
     "zero_denominator"
   ],
   "seed": 42,
+  "selective": {
+    "threshold": 0.25,
+    "selection": "Maximum validation coverage at >=85% empirical accuracy; fallback threshold 0.95",
+    "validation_curve": [
+      {
+        "threshold": 0.25,
+        "coverage": 0.975609756097561,
+        "accuracy": 1.0
+      },
+      {
+        "threshold": 0.275,
+        "coverage": 0.975609756097561,
+        "accuracy": 1.0
+      },
+      {
+        "threshold": 0.3,
+        "coverage": 0.975609756097561,
+        "accuracy": 1.0
+      },
+      {
+        "threshold": 0.325,
+        "coverage": 0.975609756097561,
+        "accuracy": 1.0
+      },
+      {
+        "threshold": 0.35,
+        "coverage": 0.9512195121951219,
+        "accuracy": 1.0
+      },
+      {
+        "threshold": 0.375,
+        "coverage": 0.9512195121951219,
+        "accuracy": 1.0
+      },
+      {
+        "threshold": 0.4,
+        "coverage": 0.8780487804878049,
+        "accuracy": 1.0
+      },
+      {
+        "threshold": 0.425,
+        "coverage": 0.8780487804878049,
+        "accuracy": 1.0
+      },
+      {
+        "threshold": 0.45,
+        "coverage": 0.8780487804878049,
+        "accuracy": 1.0
+      },
+      {
+        "threshold": 0.475,
+        "coverage": 0.8780487804878049,
+        "accuracy": 1.0
+      },
+      {
+        "threshold": 0.5,
+        "coverage": 0.8536585365853658,
+        "accuracy": 1.0
+      },
+      {
+        "threshold": 0.525,
+        "coverage": 0.8292682926829268,
+        "accuracy": 1.0
+      },
+      {
+        "threshold": 0.55,
+        "coverage": 0.8292682926829268,
+        "accuracy": 1.0
+      },
+      {
+        "threshold": 0.575,
+        "coverage": 0.8048780487804879,
+        "accuracy": 1.0
+      },
+      {
+        "threshold": 0.6,
+        "coverage": 0.8048780487804879,
+        "accuracy": 1.0
+      },
+      {
+        "threshold": 0.625,
+        "coverage": 0.8048780487804879,
+        "accuracy": 1.0
+      },
+      {
+        "threshold": 0.65,
+        "coverage": 0.8048780487804879,
+        "accuracy": 1.0
+      },
+      {
+        "threshold": 0.675,
+        "coverage": 0.8048780487804879,
+        "accuracy": 1.0
+      },
+      {
+        "threshold": 0.7,
+        "coverage": 0.8048780487804879,
+        "accuracy": 1.0
+      },
+      {
+        "threshold": 0.725,
+        "coverage": 0.8048780487804879,
+        "accuracy": 1.0
+      },
+      {
+        "threshold": 0.75,
+        "coverage": 0.8048780487804879,
+        "accuracy": 1.0
+      },
+      {
+        "threshold": 0.775,
+        "coverage": 0.8048780487804879,
+        "accuracy": 1.0
+      },
+      {
+        "threshold": 0.8,
+        "coverage": 0.7804878048780488,
+        "accuracy": 1.0
+      },
+      {
+        "threshold": 0.825,
+        "coverage": 0.7804878048780488,
+        "accuracy": 1.0
+      },
+      {
+        "threshold": 0.85,
+        "coverage": 0.6097560975609756,
+        "accuracy": 1.0
+      },
+      {
+        "threshold": 0.875,
+        "coverage": 0.5609756097560976,
+        "accuracy": 1.0
+      },
+      {
+        "threshold": 0.9,
+        "coverage": 0.0,
+        "accuracy": null
+      },
+      {
+        "threshold": 0.925,
+        "coverage": 0.0,
+        "accuracy": null
+      },
+      {
+        "threshold": 0.95,
+        "coverage": 0.0,
+        "accuracy": null
+      }
+    ],
+    "test_coverage": 1.0,
+    "test_accuracy_accepted": 1.0
+  },
   "limitations": [
-    "Synthetic mutations; six expression families per class only.",
-    "Held-out families improve evaluation but do not establish real-world generalisation.",
-    "Probabilities are model scores, not calibrated guarantees.",
-    "Tracebacks can be ambiguous; tests determine patch acceptance."
+    "48 authored synthetic programs, with shared mutation patterns; not a production corpus.",
+    "Calibration and validation contain only one program per class; uncertainty estimates are preliminary.",
+    "Program bootstrap intervals have only 12 test programs and are descriptive.",
+    "Unknown-exception and vocabulary guards do not detect every unsupported bug.",
+    "External QuixBugs tasks are algorithmic challenge bugs, not production incidents."
   ]
 }

@@ -1,0 +1,2293 @@
+{
+  "dataset": "QuixBugs",
+  "revision": "4257f44b0ff1181dedaedee6a447e133219fcebf",
+  "source": "https://github.com/jkoppel/QuixBugs",
+  "programs": 4,
+  "cases": 36,
+  "failing_cases": 29,
+  "abstained": 29,
+  "records": [
+    {
+      "program": "mergesort",
+      "case": 0,
+      "status": "passed",
+      "diagnosis": null
+    },
+    {
+      "program": "mergesort",
+      "case": 1,
+      "status": "failed",
+      "diagnosis": {
+        "label": "missing_mapping_key",
+        "score": 0.6972525707565982,
+        "ranking": [
+          {
+            "label": "missing_mapping_key",
+            "score": 0.6972525707565982
+          },
+          {
+            "label": "wrong_argument_count",
+            "score": 0.111657689029985
+          },
+          {
+            "label": "index_boundary",
+            "score": 0.05502196453622175
+          },
+          {
+            "label": "zero_denominator",
+            "score": 0.054751855343124746
+          },
+          {
+            "label": "type_conversion",
+            "score": 0.04778015234359496
+          },
+          {
+            "label": "missing_none_guard",
+            "score": 0.03353576799047539
+          }
+        ],
+        "decision": "needs_review",
+        "reasons": [
+          "Exception is outside the trained taxonomy."
+        ],
+        "threshold": 0.25,
+        "vocabulary_overlap": 0.40789473684210525,
+        "exception": "RecursionError",
+        "features": [
+          {
+            "token": "4 file",
+            "contribution": 0.15678141345725247
+          },
+          {
+            "token": "4",
+            "contribution": 0.04563114200392234
+          },
+          {
+            "token": "7",
+            "contribution": 0.0423377938106804
+          },
+          {
+            "token": "6",
+            "contribution": 0.04226861772652092
+          },
+          {
+            "token": "line",
+            "contribution": 0.03730074648987637
+          },
+          {
+            "token": "py line",
+            "contribution": 0.03568330366548347
+          },
+          {
+            "token": "candidate py",
+            "contribution": 0.03568330366548347
+          },
+          {
+            "token": "candidate",
+            "contribution": 0.03568330366548347
+          }
+        ],
+        "note": "Sigmoid-calibrated on held-out programs. Scores and rejection rules remain imperfect; tests decide patch acceptance."
+      }
+    },
+    {
+      "program": "mergesort",
+      "case": 2,
+      "status": "failed",
+      "diagnosis": {
+        "label": "missing_mapping_key",
+        "score": 0.4252805674408462,
+        "ranking": [
+          {
+            "label": "missing_mapping_key",
+            "score": 0.4252805674408462
+          },
+          {
+            "label": "index_boundary",
+            "score": 0.2094235137326739
+          },
+          {
+            "label": "wrong_argument_count",
+            "score": 0.13213823017865384
+          },
+          {
+            "label": "type_conversion",
+            "score": 0.11385254047015336
+          },
+          {
+            "label": "zero_denominator",
+            "score": 0.06599609020205813
+          },
+          {
+            "label": "missing_none_guard",
+            "score": 0.05330905797561448
+          }
+        ],
+        "decision": "needs_review",
+        "reasons": [
+          "Exception is outside the trained taxonomy."
+        ],
+        "threshold": 0.25,
+        "vocabulary_overlap": 0.4673913043478261,
+        "exception": "RecursionError",
+        "features": [
+          {
+            "token": "3 file",
+            "contribution": 0.09511157969759731
+          },
+          {
+            "token": "4",
+            "contribution": 0.027639169565749553
+          },
+          {
+            "token": "7",
+            "contribution": 0.02564436064459118
+          },
+          {
+            "token": "6",
+            "contribution": 0.025602460103951324
+          },
+          {
+            "token": "3",
+            "contribution": 0.025358267946801356
+          },
+          {
+            "token": "line",
+            "contribution": 0.024230547527886385
+          },
+          {
+            "token": "line n",
+            "contribution": 0.02259337837904893
+          },
+          {
+            "token": "file candidate",
+            "contribution": 0.02259337837904893
+          }
+        ],
+        "note": "Sigmoid-calibrated on held-out programs. Scores and rejection rules remain imperfect; tests decide patch acceptance."
+      }
+    },
+    {
+      "program": "mergesort",
+      "case": 3,
+      "status": "failed",
+      "diagnosis": {
+        "label": "missing_mapping_key",
+        "score": 0.6883017682108729,
+        "ranking": [
+          {
+            "label": "missing_mapping_key",
+            "score": 0.6883017682108729
+          },
+          {
+            "label": "wrong_argument_count",
+            "score": 0.13369557689698122
+          },
+          {
+            "label": "zero_denominator",
+            "score": 0.052809538023463026
+          },
+          {
+            "label": "type_conversion",
+            "score": 0.048506789575789314
+          },
+          {
+            "label": "index_boundary",
+            "score": 0.044412826743496676
+          },
+          {
+            "label": "missing_none_guard",
+            "score": 0.03227350054939696
+          }
+        ],
+        "decision": "needs_review",
+        "reasons": [
+          "Exception is outside the trained taxonomy."
+        ],
+        "threshold": 0.25,
+        "vocabulary_overlap": 0.4166666666666667,
+        "exception": "RecursionError",
+        "features": [
+          {
+            "token": "1 file",
+            "contribution": 0.16962832225737218
+          },
+          {
+            "token": "4",
+            "contribution": 0.04906684205312193
+          },
+          {
+            "token": "line",
+            "contribution": 0.04010922707840588
+          },
+          {
+            "token": "n",
+            "contribution": 0.03837000232730016
+          },
+          {
+            "token": "n in",
+            "contribution": 0.03837000232730016
+          },
+          {
+            "token": "line n",
+            "contribution": 0.03837000232730016
+          },
+          {
+            "token": "file",
+            "contribution": 0.03837000232730016
+          },
+          {
+            "token": "py",
+            "contribution": 0.03837000232730016
+          }
+        ],
+        "note": "Sigmoid-calibrated on held-out programs. Scores and rejection rules remain imperfect; tests decide patch acceptance."
+      }
+    },
+    {
+      "program": "mergesort",
+      "case": 4,
+      "status": "failed",
+      "diagnosis": {
+        "label": "missing_mapping_key",
+        "score": 0.6454840780848695,
+        "ranking": [
+          {
+            "label": "missing_mapping_key",
+            "score": 0.6454840780848695
+          },
+          {
+            "label": "wrong_argument_count",
+            "score": 0.13014761566632507
+          },
+          {
+            "label": "type_conversion",
+            "score": 0.06435343076401988
+          },
+          {
+            "label": "index_boundary",
+            "score": 0.06360860165669205
+          },
+          {
+            "label": "zero_denominator",
+            "score": 0.05882412871267813
+          },
+          {
+            "label": "missing_none_guard",
+            "score": 0.03758214511541548
+          }
+        ],
+        "decision": "needs_review",
+        "reasons": [
+          "Exception is outside the trained taxonomy."
+        ],
+        "threshold": 0.25,
+        "vocabulary_overlap": 0.4305555555555556,
+        "exception": "RecursionError",
+        "features": [
+          {
+            "token": "2 file",
+            "contribution": 0.08210282352700156
+          },
+          {
+            "token": "4",
+            "contribution": 0.04654188640268698
+          },
+          {
+            "token": "line",
+            "contribution": 0.03804522590554548
+          },
+          {
+            "token": "py",
+            "contribution": 0.03639550080795173
+          },
+          {
+            "token": "py line",
+            "contribution": 0.03639550080795173
+          },
+          {
+            "token": "file",
+            "contribution": 0.03639550080795173
+          },
+          {
+            "token": "file candidate",
+            "contribution": 0.03639550080795173
+          },
+          {
+            "token": "n in",
+            "contribution": 0.03639550080795173
+          }
+        ],
+        "note": "Sigmoid-calibrated on held-out programs. Scores and rejection rules remain imperfect; tests decide patch acceptance."
+      }
+    },
+    {
+      "program": "mergesort",
+      "case": 5,
+      "status": "failed",
+      "diagnosis": {
+        "label": "missing_mapping_key",
+        "score": 0.47716908528580226,
+        "ranking": [
+          {
+            "label": "missing_mapping_key",
+            "score": 0.47716908528580226
+          },
+          {
+            "label": "index_boundary",
+            "score": 0.171790661532469
+          },
+          {
+            "label": "wrong_argument_count",
+            "score": 0.13503173158096024
+          },
+          {
+            "label": "type_conversion",
+            "score": 0.09180107595762232
+          },
+          {
+            "label": "zero_denominator",
+            "score": 0.07431993323634943
+          },
+          {
+            "label": "missing_none_guard",
+            "score": 0.0498875124067969
+          }
+        ],
+        "decision": "needs_review",
+        "reasons": [
+          "Exception is outside the trained taxonomy."
+        ],
+        "threshold": 0.25,
+        "vocabulary_overlap": 0.34951456310679613,
+        "exception": "RecursionError",
+        "features": [
+          {
+            "token": "4",
+            "contribution": 0.03836631866162056
+          },
+          {
+            "token": "7",
+            "contribution": 0.03559729643914952
+          },
+          {
+            "token": "6",
+            "contribution": 0.0355391337114142
+          },
+          {
+            "token": "line",
+            "contribution": 0.03363476263601048
+          },
+          {
+            "token": "file candidate",
+            "contribution": 0.0313621851941358
+          },
+          {
+            "token": "file",
+            "contribution": 0.0313621851941358
+          },
+          {
+            "token": "n in",
+            "contribution": 0.0313621851941358
+          },
+          {
+            "token": "py",
+            "contribution": 0.0313621851941358
+          }
+        ],
+        "note": "Sigmoid-calibrated on held-out programs. Scores and rejection rules remain imperfect; tests decide patch acceptance."
+      }
+    },
+    {
+      "program": "mergesort",
+      "case": 6,
+      "status": "failed",
+      "diagnosis": {
+        "label": "missing_mapping_key",
+        "score": 0.4452816982826034,
+        "ranking": [
+          {
+            "label": "missing_mapping_key",
+            "score": 0.4452816982826034
+          },
+          {
+            "label": "index_boundary",
+            "score": 0.19164285575731096
+          },
+          {
+            "label": "wrong_argument_count",
+            "score": 0.1285660866239124
+          },
+          {
+            "label": "type_conversion",
+            "score": 0.10547788768585224
+          },
+          {
+            "label": "zero_denominator",
+            "score": 0.07526595226762695
+          },
+          {
+            "label": "missing_none_guard",
+            "score": 0.05376551938269398
+          }
+        ],
+        "decision": "needs_review",
+        "reasons": [
+          "Exception is outside the trained taxonomy."
+        ],
+        "threshold": 0.25,
+        "vocabulary_overlap": 0.38613861386138615,
+        "exception": "RecursionError",
+        "features": [
+          {
+            "token": "4",
+            "contribution": 0.03400881581268613
+          },
+          {
+            "token": "7",
+            "contribution": 0.03155428876838423
+          },
+          {
+            "token": "6",
+            "contribution": 0.0315027319455324
+          },
+          {
+            "token": "line",
+            "contribution": 0.02981465220784311
+          },
+          {
+            "token": "file",
+            "contribution": 0.027800185604402845
+          },
+          {
+            "token": "py",
+            "contribution": 0.027800185604402845
+          },
+          {
+            "token": "py line",
+            "contribution": 0.027800185604402845
+          },
+          {
+            "token": "candidate",
+            "contribution": 0.027800185604402845
+          }
+        ],
+        "note": "Sigmoid-calibrated on held-out programs. Scores and rejection rules remain imperfect; tests decide patch acceptance."
+      }
+    },
+    {
+      "program": "mergesort",
+      "case": 7,
+      "status": "failed",
+      "diagnosis": {
+        "label": "missing_mapping_key",
+        "score": 0.4917221033017539,
+        "ranking": [
+          {
+            "label": "missing_mapping_key",
+            "score": 0.4917221033017539
+          },
+          {
+            "label": "index_boundary",
+            "score": 0.1450221397711117
+          },
+          {
+            "label": "wrong_argument_count",
+            "score": 0.13702596056292454
+          },
+          {
+            "label": "type_conversion",
+            "score": 0.1017439990955536
+          },
+          {
+            "label": "zero_denominator",
+            "score": 0.07482855561138836
+          },
+          {
+            "label": "missing_none_guard",
+            "score": 0.04965724165726788
+          }
+        ],
+        "decision": "needs_review",
+        "reasons": [
+          "Exception is outside the trained taxonomy."
+        ],
+        "threshold": 0.25,
+        "vocabulary_overlap": 0.3076923076923077,
+        "exception": "RecursionError",
+        "features": [
+          {
+            "token": "4",
+            "contribution": 0.03836631866162056
+          },
+          {
+            "token": "7",
+            "contribution": 0.03559729643914952
+          },
+          {
+            "token": "6",
+            "contribution": 0.0355391337114142
+          },
+          {
+            "token": "line",
+            "contribution": 0.03363476263601048
+          },
+          {
+            "token": "file candidate",
+            "contribution": 0.0313621851941358
+          },
+          {
+            "token": "line n",
+            "contribution": 0.0313621851941358
+          },
+          {
+            "token": "candidate py",
+            "contribution": 0.0313621851941358
+          },
+          {
+            "token": "py line",
+            "contribution": 0.0313621851941358
+          }
+        ],
+        "note": "Sigmoid-calibrated on held-out programs. Scores and rejection rules remain imperfect; tests decide patch acceptance."
+      }
+    },
+    {
+      "program": "mergesort",
+      "case": 8,
+      "status": "failed",
+      "diagnosis": {
+        "label": "missing_mapping_key",
+        "score": 0.5240287789948366,
+        "ranking": [
+          {
+            "label": "missing_mapping_key",
+            "score": 0.5240287789948366
+          },
+          {
+            "label": "index_boundary",
+            "score": 0.15903683622661535
+          },
+          {
+            "label": "wrong_argument_count",
+            "score": 0.11152603663924186
+          },
+          {
+            "label": "type_conversion",
+            "score": 0.0910711768548038
+          },
+          {
+            "label": "zero_denominator",
+            "score": 0.06560927597113975
+          },
+          {
+            "label": "missing_none_guard",
+            "score": 0.04872789531336247
+          }
+        ],
+        "decision": "needs_review",
+        "reasons": [
+          "Exception is outside the trained taxonomy."
+        ],
+        "threshold": 0.25,
+        "vocabulary_overlap": 0.44565217391304346,
+        "exception": "RecursionError",
+        "features": [
+          {
+            "token": "3 file",
+            "contribution": 0.1115800741310464
+          },
+          {
+            "token": "4",
+            "contribution": 0.03242486980946236
+          },
+          {
+            "token": "7",
+            "contribution": 0.030084661309006274
+          },
+          {
+            "token": "6",
+            "contribution": 0.030035505723055637
+          },
+          {
+            "token": "line",
+            "contribution": 0.027519187358850453
+          },
+          {
+            "token": "file candidate",
+            "contribution": 0.026505403888994014
+          },
+          {
+            "token": "file",
+            "contribution": 0.026505403888994014
+          },
+          {
+            "token": "py",
+            "contribution": 0.026505403888994014
+          }
+        ],
+        "note": "Sigmoid-calibrated on held-out programs. Scores and rejection rules remain imperfect; tests decide patch acceptance."
+      }
+    },
+    {
+      "program": "mergesort",
+      "case": 9,
+      "status": "failed",
+      "diagnosis": {
+        "label": "missing_mapping_key",
+        "score": 0.6869070779735162,
+        "ranking": [
+          {
+            "label": "missing_mapping_key",
+            "score": 0.6869070779735162
+          },
+          {
+            "label": "wrong_argument_count",
+            "score": 0.1250893052628461
+          },
+          {
+            "label": "zero_denominator",
+            "score": 0.05223151943671733
+          },
+          {
+            "label": "index_boundary",
+            "score": 0.051864164572416854
+          },
+          {
+            "label": "type_conversion",
+            "score": 0.051503490966508
+          },
+          {
+            "label": "missing_none_guard",
+            "score": 0.0324044417879954
+          }
+        ],
+        "decision": "needs_review",
+        "reasons": [
+          "Exception is outside the trained taxonomy."
+        ],
+        "threshold": 0.25,
+        "vocabulary_overlap": 0.4342105263157895,
+        "exception": "RecursionError",
+        "features": [
+          {
+            "token": "1 file",
+            "contribution": 0.15160336537026353
+          },
+          {
+            "token": "4",
+            "contribution": 0.04385292670676735
+          },
+          {
+            "token": "7",
+            "contribution": 0.04068791810528003
+          },
+          {
+            "token": "6",
+            "contribution": 0.040621437767175715
+          },
+          {
+            "token": "line",
+            "contribution": 0.0358471611731228
+          },
+          {
+            "token": "n",
+            "contribution": 0.03429274902134296
+          },
+          {
+            "token": "line n",
+            "contribution": 0.03429274902134296
+          },
+          {
+            "token": "py",
+            "contribution": 0.03429274902134296
+          }
+        ],
+        "note": "Sigmoid-calibrated on held-out programs. Scores and rejection rules remain imperfect; tests decide patch acceptance."
+      }
+    },
+    {
+      "program": "mergesort",
+      "case": 10,
+      "status": "failed",
+      "diagnosis": {
+        "label": "missing_mapping_key",
+        "score": 0.6422385455903652,
+        "ranking": [
+          {
+            "label": "missing_mapping_key",
+            "score": 0.6422385455903652
+          },
+          {
+            "label": "wrong_argument_count",
+            "score": 0.12970897526721753
+          },
+          {
+            "label": "type_conversion",
+            "score": 0.07405240908018046
+          },
+          {
+            "label": "zero_denominator",
+            "score": 0.06034480585962036
+          },
+          {
+            "label": "index_boundary",
+            "score": 0.05471927547397741
+          },
+          {
+            "label": "missing_none_guard",
+            "score": 0.03893598872863897
+          }
+        ],
+        "decision": "needs_review",
+        "reasons": [
+          "Exception is outside the trained taxonomy."
+        ],
+        "threshold": 0.25,
+        "vocabulary_overlap": 0.4444444444444444,
+        "exception": "RecursionError",
+        "features": [
+          {
+            "token": "2 file",
+            "contribution": 0.07619799289164508
+          },
+          {
+            "token": "4",
+            "contribution": 0.043194596445387465
+          },
+          {
+            "token": "line",
+            "contribution": 0.03530901531246838
+          },
+          {
+            "token": "line n",
+            "contribution": 0.03377793835482542
+          },
+          {
+            "token": "n",
+            "contribution": 0.03377793835482542
+          },
+          {
+            "token": "n in",
+            "contribution": 0.03377793835482542
+          },
+          {
+            "token": "file candidate",
+            "contribution": 0.03377793835482542
+          },
+          {
+            "token": "py",
+            "contribution": 0.03377793835482542
+          }
+        ],
+        "note": "Sigmoid-calibrated on held-out programs. Scores and rejection rules remain imperfect; tests decide patch acceptance."
+      }
+    },
+    {
+      "program": "mergesort",
+      "case": 11,
+      "status": "failed",
+      "diagnosis": {
+        "label": "missing_mapping_key",
+        "score": 0.628381262069095,
+        "ranking": [
+          {
+            "label": "missing_mapping_key",
+            "score": 0.628381262069095
+          },
+          {
+            "label": "wrong_argument_count",
+            "score": 0.11860935857452579
+          },
+          {
+            "label": "index_boundary",
+            "score": 0.10707297232492233
+          },
+          {
+            "label": "zero_denominator",
+            "score": 0.055866135085435704
+          },
+          {
+            "label": "type_conversion",
+            "score": 0.05205900612266134
+          },
+          {
+            "label": "missing_none_guard",
+            "score": 0.03801126582335997
+          }
+        ],
+        "decision": "needs_review",
+        "reasons": [
+          "Exception is outside the trained taxonomy."
+        ],
+        "threshold": 0.25,
+        "vocabulary_overlap": 0.4605263157894737,
+        "exception": "RecursionError",
+        "features": [
+          {
+            "token": "1 file",
+            "contribution": 0.1376330012453689
+          },
+          {
+            "token": "4",
+            "contribution": 0.03981184653325279
+          },
+          {
+            "token": "7",
+            "contribution": 0.03693849585448513
+          },
+          {
+            "token": "6",
+            "contribution": 0.03687814172953047
+          },
+          {
+            "token": "line",
+            "contribution": 0.03254381831388479
+          },
+          {
+            "token": "line n",
+            "contribution": 0.031132646410812415
+          },
+          {
+            "token": "n",
+            "contribution": 0.031132646410812415
+          },
+          {
+            "token": "n in",
+            "contribution": 0.031132646410812415
+          }
+        ],
+        "note": "Sigmoid-calibrated on held-out programs. Scores and rejection rules remain imperfect; tests decide patch acceptance."
+      }
+    },
+    {
+      "program": "mergesort",
+      "case": 12,
+      "status": "failed",
+      "diagnosis": {
+        "label": "missing_mapping_key",
+        "score": 0.5265310990465271,
+        "ranking": [
+          {
+            "label": "missing_mapping_key",
+            "score": 0.5265310990465271
+          },
+          {
+            "label": "index_boundary",
+            "score": 0.16079465417876249
+          },
+          {
+            "label": "wrong_argument_count",
+            "score": 0.12831432102872808
+          },
+          {
+            "label": "type_conversion",
+            "score": 0.07690556959285388
+          },
+          {
+            "label": "zero_denominator",
+            "score": 0.06254315936469733
+          },
+          {
+            "label": "missing_none_guard",
+            "score": 0.04491119678843121
+          }
+        ],
+        "decision": "needs_review",
+        "reasons": [
+          "Exception is outside the trained taxonomy."
+        ],
+        "threshold": 0.25,
+        "vocabulary_overlap": 0.3523809523809524,
+        "exception": "RecursionError",
+        "features": [
+          {
+            "token": "7 file",
+            "contribution": 0.11837180602751757
+          },
+          {
+            "token": "4",
+            "contribution": 0.03754024328429392
+          },
+          {
+            "token": "7",
+            "contribution": 0.03483084161331306
+          },
+          {
+            "token": "6",
+            "contribution": 0.03477393120268651
+          },
+          {
+            "token": "line",
+            "contribution": 0.03291056364572194
+          },
+          {
+            "token": "n in",
+            "contribution": 0.030686917671167796
+          },
+          {
+            "token": "candidate py",
+            "contribution": 0.030686917671167796
+          },
+          {
+            "token": "candidate",
+            "contribution": 0.030686917671167796
+          }
+        ],
+        "note": "Sigmoid-calibrated on held-out programs. Scores and rejection rules remain imperfect; tests decide patch acceptance."
+      }
+    },
+    {
+      "program": "mergesort",
+      "case": 13,
+      "status": "failed",
+      "diagnosis": {
+        "label": "missing_mapping_key",
+        "score": 0.6280620737685471,
+        "ranking": [
+          {
+            "label": "missing_mapping_key",
+            "score": 0.6280620737685471
+          },
+          {
+            "label": "wrong_argument_count",
+            "score": 0.11729116522299836
+          },
+          {
+            "label": "index_boundary",
+            "score": 0.077673911122598
+          },
+          {
+            "label": "zero_denominator",
+            "score": 0.07280410106965453
+          },
+          {
+            "label": "type_conversion",
+            "score": 0.06297812902538058
+          },
+          {
+            "label": "missing_none_guard",
+            "score": 0.04119061979082138
+          }
+        ],
+        "decision": "needs_review",
+        "reasons": [
+          "Exception is outside the trained taxonomy."
+        ],
+        "threshold": 0.25,
+        "vocabulary_overlap": 0.34523809523809523,
+        "exception": "RecursionError",
+        "features": [
+          {
+            "token": "4",
+            "contribution": 0.049251105256867975
+          },
+          {
+            "token": "6",
+            "contribution": 0.04562182863037381
+          },
+          {
+            "token": "line",
+            "contribution": 0.04179971735148464
+          },
+          {
+            "token": "py line",
+            "contribution": 0.040259851295738704
+          },
+          {
+            "token": "n",
+            "contribution": 0.040259851295738704
+          },
+          {
+            "token": "n in",
+            "contribution": 0.040259851295738704
+          },
+          {
+            "token": "file candidate",
+            "contribution": 0.040259851295738704
+          },
+          {
+            "token": "file",
+            "contribution": 0.040259851295738704
+          }
+        ],
+        "note": "Sigmoid-calibrated on held-out programs. Scores and rejection rules remain imperfect; tests decide patch acceptance."
+      }
+    },
+    {
+      "program": "flatten",
+      "case": 0,
+      "status": "failed",
+      "diagnosis": {
+        "label": "missing_mapping_key",
+        "score": 0.3466575178312427,
+        "ranking": [
+          {
+            "label": "missing_mapping_key",
+            "score": 0.3466575178312427
+          },
+          {
+            "label": "index_boundary",
+            "score": 0.286297751822333
+          },
+          {
+            "label": "wrong_argument_count",
+            "score": 0.143004854859449
+          },
+          {
+            "label": "type_conversion",
+            "score": 0.09001453371824689
+          },
+          {
+            "label": "zero_denominator",
+            "score": 0.07346941842453289
+          },
+          {
+            "label": "missing_none_guard",
+            "score": 0.06055592334419532
+          }
+        ],
+        "decision": "needs_review",
+        "reasons": [
+          "Exception is outside the trained taxonomy.",
+          "The two leading categories are too close to distinguish reliably."
+        ],
+        "threshold": 0.25,
+        "vocabulary_overlap": 0.75,
+        "exception": "AssertionError",
+        "features": [
+          {
+            "token": "4",
+            "contribution": 0.04643170466286685
+          },
+          {
+            "token": "3",
+            "contribution": 0.020299110746233806
+          },
+          {
+            "token": "py line",
+            "contribution": 0.0123253383343063
+          },
+          {
+            "token": "file",
+            "contribution": 0.0123253383343063
+          },
+          {
+            "token": "file candidate",
+            "contribution": 0.0123253383343063
+          },
+          {
+            "token": "py",
+            "contribution": 0.0123253383343063
+          },
+          {
+            "token": "n in",
+            "contribution": 0.0123253383343063
+          },
+          {
+            "token": "n",
+            "contribution": 0.0123253383343063
+          }
+        ],
+        "note": "Sigmoid-calibrated on held-out programs. Scores and rejection rules remain imperfect; tests decide patch acceptance."
+      }
+    },
+    {
+      "program": "flatten",
+      "case": 1,
+      "status": "passed",
+      "diagnosis": null
+    },
+    {
+      "program": "flatten",
+      "case": 2,
+      "status": "failed",
+      "diagnosis": {
+        "label": "missing_mapping_key",
+        "score": 0.4357756516165038,
+        "ranking": [
+          {
+            "label": "missing_mapping_key",
+            "score": 0.4357756516165038
+          },
+          {
+            "label": "wrong_argument_count",
+            "score": 0.1793669863903846
+          },
+          {
+            "label": "index_boundary",
+            "score": 0.15665188955466663
+          },
+          {
+            "label": "zero_denominator",
+            "score": 0.08428678248218649
+          },
+          {
+            "label": "type_conversion",
+            "score": 0.07929724498771813
+          },
+          {
+            "label": "missing_none_guard",
+            "score": 0.06462144496854035
+          }
+        ],
+        "decision": "needs_review",
+        "reasons": [
+          "Exception is outside the trained taxonomy."
+        ],
+        "threshold": 0.25,
+        "vocabulary_overlap": 0.7027027027027027,
+        "exception": "AssertionError",
+        "features": [
+          {
+            "token": "candidate",
+            "contribution": 0.017106017388571773
+          },
+          {
+            "token": "py",
+            "contribution": 0.017106017388571773
+          },
+          {
+            "token": "py line",
+            "contribution": 0.017106017388571773
+          },
+          {
+            "token": "file",
+            "contribution": 0.017106017388571773
+          },
+          {
+            "token": "file candidate",
+            "contribution": 0.017106017388571773
+          },
+          {
+            "token": "n in",
+            "contribution": 0.017106017388571773
+          },
+          {
+            "token": "n",
+            "contribution": 0.017106017388571773
+          },
+          {
+            "token": "line",
+            "contribution": 0.017106017388571773
+          }
+        ],
+        "note": "Sigmoid-calibrated on held-out programs. Scores and rejection rules remain imperfect; tests decide patch acceptance."
+      }
+    },
+    {
+      "program": "flatten",
+      "case": 3,
+      "status": "failed",
+      "diagnosis": {
+        "label": "missing_mapping_key",
+        "score": 0.37241580612700026,
+        "ranking": [
+          {
+            "label": "missing_mapping_key",
+            "score": 0.37241580612700026
+          },
+          {
+            "label": "index_boundary",
+            "score": 0.2597292699736245
+          },
+          {
+            "label": "wrong_argument_count",
+            "score": 0.15605784803048342
+          },
+          {
+            "label": "type_conversion",
+            "score": 0.07656940489961041
+          },
+          {
+            "label": "zero_denominator",
+            "score": 0.07512480940583822
+          },
+          {
+            "label": "missing_none_guard",
+            "score": 0.06010286156344321
+          }
+        ],
+        "decision": "needs_review",
+        "reasons": [
+          "Exception is outside the trained taxonomy."
+        ],
+        "threshold": 0.25,
+        "vocabulary_overlap": 0.7380952380952381,
+        "exception": "AssertionError",
+        "features": [
+          {
+            "token": "4",
+            "contribution": 0.0503248259382243
+          },
+          {
+            "token": "3",
+            "contribution": 0.02200111373084963
+          },
+          {
+            "token": "candidate",
+            "contribution": 0.013358770926188744
+          },
+          {
+            "token": "py line",
+            "contribution": 0.013358770926188744
+          },
+          {
+            "token": "py",
+            "contribution": 0.013358770926188744
+          },
+          {
+            "token": "file",
+            "contribution": 0.013358770926188744
+          },
+          {
+            "token": "file candidate",
+            "contribution": 0.013358770926188744
+          },
+          {
+            "token": "n in",
+            "contribution": 0.013358770926188744
+          }
+        ],
+        "note": "Sigmoid-calibrated on held-out programs. Scores and rejection rules remain imperfect; tests decide patch acceptance."
+      }
+    },
+    {
+      "program": "flatten",
+      "case": 4,
+      "status": "failed",
+      "diagnosis": {
+        "label": "missing_mapping_key",
+        "score": 0.4153788193250753,
+        "ranking": [
+          {
+            "label": "missing_mapping_key",
+            "score": 0.4153788193250753
+          },
+          {
+            "label": "index_boundary",
+            "score": 0.25801945882553784
+          },
+          {
+            "label": "wrong_argument_count",
+            "score": 0.12364344893332588
+          },
+          {
+            "label": "zero_denominator",
+            "score": 0.07726349553404002
+          },
+          {
+            "label": "type_conversion",
+            "score": 0.06679361761034458
+          },
+          {
+            "label": "missing_none_guard",
+            "score": 0.0589011597716763
+          }
+        ],
+        "decision": "needs_review",
+        "reasons": [
+          "Exception is outside the trained taxonomy."
+        ],
+        "threshold": 0.25,
+        "vocabulary_overlap": 0.725,
+        "exception": "AssertionError",
+        "features": [
+          {
+            "token": "4",
+            "contribution": 0.05521500744204078
+          },
+          {
+            "token": "6",
+            "contribution": 0.051146255382651086
+          },
+          {
+            "token": "py line",
+            "contribution": 0.014656874064730362
+          },
+          {
+            "token": "file",
+            "contribution": 0.014656874064730362
+          },
+          {
+            "token": "file candidate",
+            "contribution": 0.014656874064730362
+          },
+          {
+            "token": "py",
+            "contribution": 0.014656874064730362
+          },
+          {
+            "token": "n in",
+            "contribution": 0.014656874064730362
+          },
+          {
+            "token": "n",
+            "contribution": 0.014656874064730362
+          }
+        ],
+        "note": "Sigmoid-calibrated on held-out programs. Scores and rejection rules remain imperfect; tests decide patch acceptance."
+      }
+    },
+    {
+      "program": "flatten",
+      "case": 5,
+      "status": "failed",
+      "diagnosis": {
+        "label": "missing_mapping_key",
+        "score": 0.512903648856251,
+        "ranking": [
+          {
+            "label": "missing_mapping_key",
+            "score": 0.512903648856251
+          },
+          {
+            "label": "index_boundary",
+            "score": 0.16574872630291515
+          },
+          {
+            "label": "wrong_argument_count",
+            "score": 0.09893940536314796
+          },
+          {
+            "label": "zero_denominator",
+            "score": 0.08994695889842941
+          },
+          {
+            "label": "type_conversion",
+            "score": 0.06928152212195128
+          },
+          {
+            "label": "missing_none_guard",
+            "score": 0.06317973845730518
+          }
+        ],
+        "decision": "needs_review",
+        "reasons": [
+          "Exception is outside the trained taxonomy."
+        ],
+        "threshold": 0.25,
+        "vocabulary_overlap": 0.6,
+        "exception": "AssertionError",
+        "features": [
+          {
+            "token": "py line",
+            "contribution": 0.021807241388840753
+          },
+          {
+            "token": "py",
+            "contribution": 0.021807241388840753
+          },
+          {
+            "token": "n in",
+            "contribution": 0.021807241388840753
+          },
+          {
+            "token": "candidate py",
+            "contribution": 0.021807241388840753
+          },
+          {
+            "token": "candidate",
+            "contribution": 0.021807241388840753
+          },
+          {
+            "token": "n",
+            "contribution": 0.021807241388840753
+          },
+          {
+            "token": "file",
+            "contribution": 0.021807241388840753
+          },
+          {
+            "token": "file candidate",
+            "contribution": 0.021807241388840753
+          }
+        ],
+        "note": "Sigmoid-calibrated on held-out programs. Scores and rejection rules remain imperfect; tests decide patch acceptance."
+      }
+    },
+    {
+      "program": "flatten",
+      "case": 6,
+      "status": "failed",
+      "diagnosis": {
+        "label": "missing_mapping_key",
+        "score": 0.512903648856251,
+        "ranking": [
+          {
+            "label": "missing_mapping_key",
+            "score": 0.512903648856251
+          },
+          {
+            "label": "index_boundary",
+            "score": 0.16574872630291515
+          },
+          {
+            "label": "wrong_argument_count",
+            "score": 0.09893940536314796
+          },
+          {
+            "label": "zero_denominator",
+            "score": 0.08994695889842941
+          },
+          {
+            "label": "type_conversion",
+            "score": 0.06928152212195128
+          },
+          {
+            "label": "missing_none_guard",
+            "score": 0.06317973845730518
+          }
+        ],
+        "decision": "needs_review",
+        "reasons": [
+          "Exception is outside the trained taxonomy."
+        ],
+        "threshold": 0.25,
+        "vocabulary_overlap": 0.5454545454545454,
+        "exception": "AssertionError",
+        "features": [
+          {
+            "token": "py line",
+            "contribution": 0.021807241388840753
+          },
+          {
+            "token": "py",
+            "contribution": 0.021807241388840753
+          },
+          {
+            "token": "n in",
+            "contribution": 0.021807241388840753
+          },
+          {
+            "token": "candidate py",
+            "contribution": 0.021807241388840753
+          },
+          {
+            "token": "candidate",
+            "contribution": 0.021807241388840753
+          },
+          {
+            "token": "n",
+            "contribution": 0.021807241388840753
+          },
+          {
+            "token": "file",
+            "contribution": 0.021807241388840753
+          },
+          {
+            "token": "file candidate",
+            "contribution": 0.021807241388840753
+          }
+        ],
+        "note": "Sigmoid-calibrated on held-out programs. Scores and rejection rules remain imperfect; tests decide patch acceptance."
+      }
+    },
+    {
+      "program": "next_permutation",
+      "case": 0,
+      "status": "failed",
+      "diagnosis": {
+        "label": "missing_mapping_key",
+        "score": 0.3892637171571366,
+        "ranking": [
+          {
+            "label": "missing_mapping_key",
+            "score": 0.3892637171571366
+          },
+          {
+            "label": "index_boundary",
+            "score": 0.23649704531538435
+          },
+          {
+            "label": "wrong_argument_count",
+            "score": 0.1654284943610992
+          },
+          {
+            "label": "type_conversion",
+            "score": 0.07584075355281292
+          },
+          {
+            "label": "zero_denominator",
+            "score": 0.07493956986152062
+          },
+          {
+            "label": "missing_none_guard",
+            "score": 0.05803041975204623
+          }
+        ],
+        "decision": "needs_review",
+        "reasons": [
+          "Exception is outside the trained taxonomy."
+        ],
+        "threshold": 0.25,
+        "vocabulary_overlap": 0.7142857142857143,
+        "exception": "AssertionError",
+        "features": [
+          {
+            "token": "4",
+            "contribution": 0.055051390318375776
+          },
+          {
+            "token": "3",
+            "contribution": 0.024067483132932548
+          },
+          {
+            "token": "candidate",
+            "contribution": 0.01461344175008459
+          },
+          {
+            "token": "py line",
+            "contribution": 0.01461344175008459
+          },
+          {
+            "token": "py",
+            "contribution": 0.01461344175008459
+          },
+          {
+            "token": "file",
+            "contribution": 0.01461344175008459
+          },
+          {
+            "token": "file candidate",
+            "contribution": 0.01461344175008459
+          },
+          {
+            "token": "n in",
+            "contribution": 0.01461344175008459
+          }
+        ],
+        "note": "Sigmoid-calibrated on held-out programs. Scores and rejection rules remain imperfect; tests decide patch acceptance."
+      }
+    },
+    {
+      "program": "next_permutation",
+      "case": 1,
+      "status": "failed",
+      "diagnosis": {
+        "label": "index_boundary",
+        "score": 0.3328184915087016,
+        "ranking": [
+          {
+            "label": "index_boundary",
+            "score": 0.3328184915087016
+          },
+          {
+            "label": "missing_mapping_key",
+            "score": 0.31396932830329
+          },
+          {
+            "label": "wrong_argument_count",
+            "score": 0.13826044590172237
+          },
+          {
+            "label": "type_conversion",
+            "score": 0.08665033912027173
+          },
+          {
+            "label": "zero_denominator",
+            "score": 0.0701376797116758
+          },
+          {
+            "label": "missing_none_guard",
+            "score": 0.0581637154543386
+          }
+        ],
+        "decision": "needs_review",
+        "reasons": [
+          "Exception is outside the trained taxonomy.",
+          "The two leading categories are too close to distinguish reliably."
+        ],
+        "threshold": 0.25,
+        "vocabulary_overlap": 0.7272727272727273,
+        "exception": "AssertionError",
+        "features": [
+          {
+            "token": "result",
+            "contribution": 0.5100283959293511
+          },
+          {
+            "token": "3 6",
+            "contribution": 0.18596045060270658
+          },
+          {
+            "token": "2 5",
+            "contribution": 0.14924724888884464
+          },
+          {
+            "token": "6",
+            "contribution": 0.106011412864141
+          },
+          {
+            "token": "1 2",
+            "contribution": 0.0895854527895007
+          },
+          {
+            "token": "1",
+            "contribution": 0.05922302231908001
+          },
+          {
+            "token": "3",
+            "contribution": 0.05866177028299679
+          },
+          {
+            "token": "5",
+            "contribution": 0.04643077925731004
+          }
+        ],
+        "note": "Sigmoid-calibrated on held-out programs. Scores and rejection rules remain imperfect; tests decide patch acceptance."
+      }
+    },
+    {
+      "program": "next_permutation",
+      "case": 2,
+      "status": "failed",
+      "diagnosis": {
+        "label": "missing_mapping_key",
+        "score": 0.3867561406349108,
+        "ranking": [
+          {
+            "label": "missing_mapping_key",
+            "score": 0.3867561406349108
+          },
+          {
+            "label": "index_boundary",
+            "score": 0.25778693670870384
+          },
+          {
+            "label": "wrong_argument_count",
+            "score": 0.12137533985380931
+          },
+          {
+            "label": "type_conversion",
+            "score": 0.09698437261013575
+          },
+          {
+            "label": "zero_denominator",
+            "score": 0.07648045841371581
+          },
+          {
+            "label": "missing_none_guard",
+            "score": 0.06061675177872433
+          }
+        ],
+        "decision": "needs_review",
+        "reasons": [
+          "Exception is outside the trained taxonomy."
+        ],
+        "threshold": 0.25,
+        "vocabulary_overlap": 0.7380952380952381,
+        "exception": "AssertionError",
+        "features": [
+          {
+            "token": "6",
+            "contribution": 0.04736912893006216
+          },
+          {
+            "token": "3",
+            "contribution": 0.022356359023982766
+          },
+          {
+            "token": "candidate py",
+            "contribution": 0.013574470938089417
+          },
+          {
+            "token": "py line",
+            "contribution": 0.013574470938089417
+          },
+          {
+            "token": "py",
+            "contribution": 0.013574470938089417
+          },
+          {
+            "token": "file",
+            "contribution": 0.013574470938089417
+          },
+          {
+            "token": "file candidate",
+            "contribution": 0.013574470938089417
+          },
+          {
+            "token": "n in",
+            "contribution": 0.013574470938089417
+          }
+        ],
+        "note": "Sigmoid-calibrated on held-out programs. Scores and rejection rules remain imperfect; tests decide patch acceptance."
+      }
+    },
+    {
+      "program": "next_permutation",
+      "case": 3,
+      "status": "failed",
+      "diagnosis": {
+        "label": "missing_mapping_key",
+        "score": 0.349309625068867,
+        "ranking": [
+          {
+            "label": "missing_mapping_key",
+            "score": 0.349309625068867
+          },
+          {
+            "label": "index_boundary",
+            "score": 0.3055324910896594
+          },
+          {
+            "label": "wrong_argument_count",
+            "score": 0.1134348462099837
+          },
+          {
+            "label": "type_conversion",
+            "score": 0.09743835666322996
+          },
+          {
+            "label": "zero_denominator",
+            "score": 0.07415113595579663
+          },
+          {
+            "label": "missing_none_guard",
+            "score": 0.0601335450124632
+          }
+        ],
+        "decision": "needs_review",
+        "reasons": [
+          "Exception is outside the trained taxonomy.",
+          "The two leading categories are too close to distinguish reliably."
+        ],
+        "threshold": 0.25,
+        "vocabulary_overlap": 0.7045454545454546,
+        "exception": "AssertionError",
+        "features": [
+          {
+            "token": "4",
+            "contribution": 0.05263765794689861
+          },
+          {
+            "token": "7",
+            "contribution": 0.04883862666950905
+          },
+          {
+            "token": "line n",
+            "contribution": 0.013972714291488485
+          },
+          {
+            "token": "candidate py",
+            "contribution": 0.013972714291488485
+          },
+          {
+            "token": "candidate",
+            "contribution": 0.013972714291488485
+          },
+          {
+            "token": "py line",
+            "contribution": 0.013972714291488485
+          },
+          {
+            "token": "line",
+            "contribution": 0.013972714291488485
+          },
+          {
+            "token": "py",
+            "contribution": 0.013972714291488485
+          }
+        ],
+        "note": "Sigmoid-calibrated on held-out programs. Scores and rejection rules remain imperfect; tests decide patch acceptance."
+      }
+    },
+    {
+      "program": "next_permutation",
+      "case": 4,
+      "status": "failed",
+      "diagnosis": {
+        "label": "index_boundary",
+        "score": 0.38160698010713057,
+        "ranking": [
+          {
+            "label": "index_boundary",
+            "score": 0.38160698010713057
+          },
+          {
+            "label": "missing_mapping_key",
+            "score": 0.29845524757867714
+          },
+          {
+            "label": "wrong_argument_count",
+            "score": 0.10396068147780652
+          },
+          {
+            "label": "type_conversion",
+            "score": 0.08195199867436083
+          },
+          {
+            "label": "zero_denominator",
+            "score": 0.0743983491542347
+          },
+          {
+            "label": "missing_none_guard",
+            "score": 0.05962674300779033
+          }
+        ],
+        "decision": "needs_review",
+        "reasons": [
+          "Exception is outside the trained taxonomy."
+        ],
+        "threshold": 0.25,
+        "vocabulary_overlap": 0.7272727272727273,
+        "exception": "AssertionError",
+        "features": [
+          {
+            "token": "result",
+            "contribution": 0.48493498581616046
+          },
+          {
+            "token": "8",
+            "contribution": 0.1956484422489186
+          },
+          {
+            "token": "4 7",
+            "contribution": 0.17785807025190084
+          },
+          {
+            "token": "5 8",
+            "contribution": 0.1756026191132201
+          },
+          {
+            "token": "7",
+            "contribution": 0.1001278845273958
+          },
+          {
+            "token": "4",
+            "contribution": 0.08962343242234924
+          },
+          {
+            "token": "1",
+            "contribution": 0.056309248107572825
+          },
+          {
+            "token": "5",
+            "contribution": 0.04414638373133996
+          }
+        ],
+        "note": "Sigmoid-calibrated on held-out programs. Scores and rejection rules remain imperfect; tests decide patch acceptance."
+      }
+    },
+    {
+      "program": "next_permutation",
+      "case": 5,
+      "status": "failed",
+      "diagnosis": {
+        "label": "missing_mapping_key",
+        "score": 0.33776225926759484,
+        "ranking": [
+          {
+            "label": "missing_mapping_key",
+            "score": 0.33776225926759484
+          },
+          {
+            "label": "index_boundary",
+            "score": 0.28400000469833364
+          },
+          {
+            "label": "wrong_argument_count",
+            "score": 0.12962084436570964
+          },
+          {
+            "label": "type_conversion",
+            "score": 0.11100538970181673
+          },
+          {
+            "label": "zero_denominator",
+            "score": 0.07529657374862428
+          },
+          {
+            "label": "missing_none_guard",
+            "score": 0.062314928217920854
+          }
+        ],
+        "decision": "needs_review",
+        "reasons": [
+          "Exception is outside the trained taxonomy.",
+          "The two leading categories are too close to distinguish reliably."
+        ],
+        "threshold": 0.25,
+        "vocabulary_overlap": 0.7045454545454546,
+        "exception": "AssertionError",
+        "features": [
+          {
+            "token": "6",
+            "contribution": 0.04917088215142291
+          },
+          {
+            "token": "file",
+            "contribution": 0.014090795542180854
+          },
+          {
+            "token": "line",
+            "contribution": 0.014090795542180854
+          },
+          {
+            "token": "line n",
+            "contribution": 0.014090795542180854
+          },
+          {
+            "token": "file candidate",
+            "contribution": 0.014090795542180854
+          },
+          {
+            "token": "n in",
+            "contribution": 0.014090795542180854
+          },
+          {
+            "token": "py",
+            "contribution": 0.014090795542180854
+          },
+          {
+            "token": "candidate",
+            "contribution": 0.014090795542180854
+          }
+        ],
+        "note": "Sigmoid-calibrated on held-out programs. Scores and rejection rules remain imperfect; tests decide patch acceptance."
+      }
+    },
+    {
+      "program": "next_permutation",
+      "case": 6,
+      "status": "failed",
+      "diagnosis": {
+        "label": "missing_mapping_key",
+        "score": 0.3668628501169335,
+        "ranking": [
+          {
+            "label": "missing_mapping_key",
+            "score": 0.3668628501169335
+          },
+          {
+            "label": "index_boundary",
+            "score": 0.2784223310434553
+          },
+          {
+            "label": "wrong_argument_count",
+            "score": 0.11997858760651445
+          },
+          {
+            "label": "type_conversion",
+            "score": 0.09580011838032926
+          },
+          {
+            "label": "zero_denominator",
+            "score": 0.07724782279344683
+          },
+          {
+            "label": "missing_none_guard",
+            "score": 0.06168829005932055
+          }
+        ],
+        "decision": "needs_review",
+        "reasons": [
+          "Exception is outside the trained taxonomy."
+        ],
+        "threshold": 0.25,
+        "vocabulary_overlap": 0.6590909090909091,
+        "exception": "AssertionError",
+        "features": [
+          {
+            "token": "7",
+            "contribution": 0.054964151251550006
+          },
+          {
+            "token": "py line",
+            "contribution": 0.015725224767459415
+          },
+          {
+            "token": "file",
+            "contribution": 0.015725224767459415
+          },
+          {
+            "token": "file candidate",
+            "contribution": 0.015725224767459415
+          },
+          {
+            "token": "py",
+            "contribution": 0.015725224767459415
+          },
+          {
+            "token": "n in",
+            "contribution": 0.015725224767459415
+          },
+          {
+            "token": "n",
+            "contribution": 0.015725224767459415
+          },
+          {
+            "token": "line n",
+            "contribution": 0.015725224767459415
+          }
+        ],
+        "note": "Sigmoid-calibrated on held-out programs. Scores and rejection rules remain imperfect; tests decide patch acceptance."
+      }
+    },
+    {
+      "program": "next_permutation",
+      "case": 7,
+      "status": "failed",
+      "diagnosis": {
+        "label": "missing_mapping_key",
+        "score": 0.4591382019401096,
+        "ranking": [
+          {
+            "label": "missing_mapping_key",
+            "score": 0.4591382019401096
+          },
+          {
+            "label": "index_boundary",
+            "score": 0.20993752940785781
+          },
+          {
+            "label": "wrong_argument_count",
+            "score": 0.11293804232339626
+          },
+          {
+            "label": "type_conversion",
+            "score": 0.08273355455363274
+          },
+          {
+            "label": "zero_denominator",
+            "score": 0.07856151779021554
+          },
+          {
+            "label": "missing_none_guard",
+            "score": 0.056691153984788016
+          }
+        ],
+        "decision": "needs_review",
+        "reasons": [
+          "Exception is outside the trained taxonomy."
+        ],
+        "threshold": 0.25,
+        "vocabulary_overlap": 0.7,
+        "exception": "AssertionError",
+        "features": [
+          {
+            "token": "4",
+            "contribution": 0.06269093318784366
+          },
+          {
+            "token": "3",
+            "contribution": 0.027407354625566965
+          },
+          {
+            "token": "line",
+            "contribution": 0.016641365369717106
+          },
+          {
+            "token": "file candidate",
+            "contribution": 0.016641365369717106
+          },
+          {
+            "token": "file",
+            "contribution": 0.016641365369717106
+          },
+          {
+            "token": "line n",
+            "contribution": 0.016641365369717106
+          },
+          {
+            "token": "py",
+            "contribution": 0.016641365369717106
+          },
+          {
+            "token": "n",
+            "contribution": 0.016641365369717106
+          }
+        ],
+        "note": "Sigmoid-calibrated on held-out programs. Scores and rejection rules remain imperfect; tests decide patch acceptance."
+      }
+    },
+    {
+      "program": "find_in_sorted",
+      "case": 0,
+      "status": "passed",
+      "diagnosis": null
+    },
+    {
+      "program": "find_in_sorted",
+      "case": 1,
+      "status": "failed",
+      "diagnosis": {
+        "label": "missing_mapping_key",
+        "score": 0.3190100219806495,
+        "ranking": [
+          {
+            "label": "missing_mapping_key",
+            "score": 0.3190100219806495
+          },
+          {
+            "label": "index_boundary",
+            "score": 0.25369404515446986
+          },
+          {
+            "label": "wrong_argument_count",
+            "score": 0.16205888556305603
+          },
+          {
+            "label": "zero_denominator",
+            "score": 0.12075577232230697
+          },
+          {
+            "label": "type_conversion",
+            "score": 0.08330710909278582
+          },
+          {
+            "label": "missing_none_guard",
+            "score": 0.06117416588673183
+          }
+        ],
+        "decision": "needs_review",
+        "reasons": [
+          "Exception is outside the trained taxonomy.",
+          "The two leading categories are too close to distinguish reliably."
+        ],
+        "threshold": 0.25,
+        "vocabulary_overlap": 0.4772727272727273,
+        "exception": "RecursionError",
+        "features": [
+          {
+            "token": "5 file",
+            "contribution": 0.05102198794421994
+          },
+          {
+            "token": "4",
+            "contribution": 0.03226680622897121
+          },
+          {
+            "token": "7",
+            "contribution": 0.029938005692119955
+          },
+          {
+            "token": "6",
+            "contribution": 0.029889089728038647
+          },
+          {
+            "token": "line",
+            "contribution": 0.027385037821421085
+          },
+          {
+            "token": "py line",
+            "contribution": 0.02637619630649091
+          },
+          {
+            "token": "candidate py",
+            "contribution": 0.02637619630649091
+          },
+          {
+            "token": "py",
+            "contribution": 0.02637619630649091
+          }
+        ],
+        "note": "Sigmoid-calibrated on held-out programs. Scores and rejection rules remain imperfect; tests decide patch acceptance."
+      }
+    },
+    {
+      "program": "find_in_sorted",
+      "case": 2,
+      "status": "passed",
+      "diagnosis": null
+    },
+    {
+      "program": "find_in_sorted",
+      "case": 3,
+      "status": "passed",
+      "diagnosis": null
+    },
+    {
+      "program": "find_in_sorted",
+      "case": 4,
+      "status": "passed",
+      "diagnosis": null
+    },
+    {
+      "program": "find_in_sorted",
+      "case": 5,
+      "status": "passed",
+      "diagnosis": null
+    },
+    {
+      "program": "find_in_sorted",
+      "case": 6,
+      "status": "failed",
+      "diagnosis": {
+        "label": "zero_denominator",
+        "score": 0.34985918497961543,
+        "ranking": [
+          {
+            "label": "zero_denominator",
+            "score": 0.34985918497961543
+          },
+          {
+            "label": "missing_mapping_key",
+            "score": 0.2999395311630832
+          },
+          {
+            "label": "wrong_argument_count",
+            "score": 0.14528257886786355
+          },
+          {
+            "label": "index_boundary",
+            "score": 0.0781795550660587
+          },
+          {
+            "label": "type_conversion",
+            "score": 0.0635958460004264
+          },
+          {
+            "label": "missing_none_guard",
+            "score": 0.06314330392295277
+          }
+        ],
+        "decision": "needs_review",
+        "reasons": [
+          "Exception is outside the trained taxonomy.",
+          "The two leading categories are too close to distinguish reliably."
+        ],
+        "threshold": 0.25,
+        "vocabulary_overlap": 0.325,
+        "exception": "RecursionError",
+        "features": [
+          {
+            "token": "0",
+            "contribution": 0.24665474885883013
+          },
+          {
+            "token": "return",
+            "contribution": 0.23136663663451298
+          },
+          {
+            "token": "len",
+            "contribution": 0.16476635600831613
+          },
+          {
+            "token": "line",
+            "contribution": 0.0283575892735943
+          },
+          {
+            "token": "line n",
+            "contribution": 0.026505638960441117
+          },
+          {
+            "token": "file candidate",
+            "contribution": 0.026505638960441117
+          },
+          {
+            "token": "file",
+            "contribution": 0.026505638960441117
+          },
+          {
+            "token": "n",
+            "contribution": 0.026505638960441117
+          }
+        ],
+        "note": "Sigmoid-calibrated on held-out programs. Scores and rejection rules remain imperfect; tests decide patch acceptance."
+      }
+    }
+  ],
+  "interpretation": "External algorithmic defects are outside the six mutation labels. This measures rejection behavior, not classification accuracy or production generalisation. Tasks were chosen before scoring to exercise recursion and semantic errors; not a random benchmark sample."
+}

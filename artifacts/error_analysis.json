@@ -1,0 +1,822 @@
+[
+  {
+    "id": "0e7e79b7e5bcdde6",
+    "program": "sensor_average",
+    "actual": "type_conversion",
+    "predicted": "type_conversion",
+    "score": 0.8536152279989353,
+    "accepted": true,
+    "correct": true,
+    "traceback": "Traceback (most recent call last):\n  File \"candidate.py\", line N, in <module>\n    print(solve(['0.1', '0.3']))\n\n  File \"candidate.py\", line N, in solve\n    total = sum((sample for sample in x))\n\nTypeError: unsupported operand type(s) for +: 'int' and 'str'"
+  },
+  {
+    "id": "b92c57bb18ed3115",
+    "program": "sensor_average",
+    "actual": "type_conversion",
+    "predicted": "type_conversion",
+    "score": 0.8652333308941966,
+    "accepted": true,
+    "correct": true,
+    "traceback": "Traceback (most recent call last):\n  File \"candidate.py\", line N, in <module>\n    print(solve(['1.1', '1.3']))\n\n  File \"candidate.py\", line N, in solve\n    total = sum((sample for sample in x))\n\nTypeError: unsupported operand type(s) for +: 'int' and 'str'"
+  },
+  {
+    "id": "948ebdefe8cb1a72",
+    "program": "sensor_average",
+    "actual": "type_conversion",
+    "predicted": "type_conversion",
+    "score": 0.875158820259593,
+    "accepted": true,
+    "correct": true,
+    "traceback": "Traceback (most recent call last):\n  File \"candidate.py\", line N, in <module>\n    print(solve(['2.1', '2.3']))\n\n  File \"candidate.py\", line N, in solve\n    total = sum((sample for sample in x))\n\nTypeError: unsupported operand type(s) for +: 'int' and 'str'"
+  },
+  {
+    "id": "6d9e6687232f265c",
+    "program": "sensor_average",
+    "actual": "type_conversion",
+    "predicted": "type_conversion",
+    "score": 0.8646812660576182,
+    "accepted": true,
+    "correct": true,
+    "traceback": "Traceback (most recent call last):\n  File \"candidate.py\", line N, in <module>\n    print(solve(['3.1', '3.3']))\n\n  File \"candidate.py\", line N, in solve\n    total = sum((sample for sample in x))\n\nTypeError: unsupported operand type(s) for +: 'int' and 'str'"
+  },
+  {
+    "id": "b5c9cfdc26902960",
+    "program": "sensor_average",
+    "actual": "type_conversion",
+    "predicted": "type_conversion",
+    "score": 0.8714740508391844,
+    "accepted": true,
+    "correct": true,
+    "traceback": "Traceback (most recent call last):\n  File \"candidate.py\", line N, in <module>\n    print(solve(['4.1', '4.3']))\n\n  File \"candidate.py\", line N, in solve\n    total = sum((sample for sample in x))\n\nTypeError: unsupported operand type(s) for +: 'int' and 'str'"
+  },
+  {
+    "id": "9a6bc2b4a4266b17",
+    "program": "sensor_average",
+    "actual": "type_conversion",
+    "predicted": "type_conversion",
+    "score": 0.8783840222910922,
+    "accepted": true,
+    "correct": true,
+    "traceback": "Traceback (most recent call last):\n  File \"candidate.py\", line N, in <module>\n    print(solve(['5.1', '5.3']))\n\n  File \"candidate.py\", line N, in solve\n    total = sum((sample for sample in x))\n\nTypeError: unsupported operand type(s) for +: 'int' and 'str'"
+  },
+  {
+    "id": "50b998436f562a1b",
+    "program": "sensor_average",
+    "actual": "type_conversion",
+    "predicted": "type_conversion",
+    "score": 0.8767807386844081,
+    "accepted": true,
+    "correct": true,
+    "traceback": "Traceback (most recent call last):\n  File \"candidate.py\", line N, in <module>\n    print(solve(['6.1', '6.3']))\n\n  File \"candidate.py\", line N, in solve\n    total = sum((sample for sample in x))\n\nTypeError: unsupported operand type(s) for +: 'int' and 'str'"
+  },
+  {
+    "id": "6b18ee646bba8919",
+    "program": "sensor_average",
+    "actual": "type_conversion",
+    "predicted": "type_conversion",
+    "score": 0.8768017557451078,
+    "accepted": true,
+    "correct": true,
+    "traceback": "Traceback (most recent call last):\n  File \"candidate.py\", line N, in <module>\n    print(solve(['7.1', '7.3']))\n\n  File \"candidate.py\", line N, in solve\n    total = sum((sample for sample in x))\n\nTypeError: unsupported operand type(s) for +: 'int' and 'str'"
+  },
+  {
+    "id": "8724ccb43ec3dde6",
+    "program": "duration",
+    "actual": "type_conversion",
+    "predicted": "type_conversion",
+    "score": 0.880082514829255,
+    "accepted": true,
+    "correct": true,
+    "traceback": "Traceback (most recent call last):\n  File \"candidate.py\", line N, in <module>\n    print(solve('0:30'))\n\n  File \"candidate.py\", line N, in solve\n    return hours * 60 + int(minutes)\n\nTypeError: can only concatenate str (not \"int\") to str"
+  },
+  {
+    "id": "0636b3b288d31ddc",
+    "program": "duration",
+    "actual": "type_conversion",
+    "predicted": "type_conversion",
+    "score": 0.8818797433118032,
+    "accepted": true,
+    "correct": true,
+    "traceback": "Traceback (most recent call last):\n  File \"candidate.py\", line N, in <module>\n    print(solve('1:30'))\n\n  File \"candidate.py\", line N, in solve\n    return hours * 60 + int(minutes)\n\nTypeError: can only concatenate str (not \"int\") to str"
+  },
+  {
+    "id": "6d50dbc6ec1ce898",
+    "program": "duration",
+    "actual": "type_conversion",
+    "predicted": "type_conversion",
+    "score": 0.8838903794051418,
+    "accepted": true,
+    "correct": true,
+    "traceback": "Traceback (most recent call last):\n  File \"candidate.py\", line N, in <module>\n    print(solve('2:30'))\n\n  File \"candidate.py\", line N, in solve\n    return hours * 60 + int(minutes)\n\nTypeError: can only concatenate str (not \"int\") to str"
+  },
+  {
+    "id": "601b5133ce704e18",
+    "program": "duration",
+    "actual": "type_conversion",
+    "predicted": "type_conversion",
+    "score": 0.8817788993484199,
+    "accepted": true,
+    "correct": true,
+    "traceback": "Traceback (most recent call last):\n  File \"candidate.py\", line N, in <module>\n    print(solve('3:30'))\n\n  File \"candidate.py\", line N, in solve\n    return hours * 60 + int(minutes)\n\nTypeError: can only concatenate str (not \"int\") to str"
+  },
+  {
+    "id": "6d73df1d199ff0e7",
+    "program": "duration",
+    "actual": "type_conversion",
+    "predicted": "type_conversion",
+    "score": 0.8819616406525479,
+    "accepted": true,
+    "correct": true,
+    "traceback": "Traceback (most recent call last):\n  File \"candidate.py\", line N, in <module>\n    print(solve('4:30'))\n\n  File \"candidate.py\", line N, in solve\n    return hours * 60 + int(minutes)\n\nTypeError: can only concatenate str (not \"int\") to str"
+  },
+  {
+    "id": "aeadced0676a22c0",
+    "program": "duration",
+    "actual": "type_conversion",
+    "predicted": "type_conversion",
+    "score": 0.8850571857401965,
+    "accepted": true,
+    "correct": true,
+    "traceback": "Traceback (most recent call last):\n  File \"candidate.py\", line N, in <module>\n    print(solve('5:30'))\n\n  File \"candidate.py\", line N, in solve\n    return hours * 60 + int(minutes)\n\nTypeError: can only concatenate str (not \"int\") to str"
+  },
+  {
+    "id": "475e5493843377ea",
+    "program": "duration",
+    "actual": "type_conversion",
+    "predicted": "type_conversion",
+    "score": 0.8819704408131513,
+    "accepted": true,
+    "correct": true,
+    "traceback": "Traceback (most recent call last):\n  File \"candidate.py\", line N, in <module>\n    print(solve('6:30'))\n\n  File \"candidate.py\", line N, in solve\n    return hours * 60 + int(minutes)\n\nTypeError: can only concatenate str (not \"int\") to str"
+  },
+  {
+    "id": "0f5aa3bf6c3bf84f",
+    "program": "duration",
+    "actual": "type_conversion",
+    "predicted": "type_conversion",
+    "score": 0.881982946252142,
+    "accepted": true,
+    "correct": true,
+    "traceback": "Traceback (most recent call last):\n  File \"candidate.py\", line N, in <module>\n    print(solve('7:30'))\n\n  File \"candidate.py\", line N, in solve\n    return hours * 60 + int(minutes)\n\nTypeError: can only concatenate str (not \"int\") to str"
+  },
+  {
+    "id": "a09cd23ac25d9b60",
+    "program": "optional_record",
+    "actual": "missing_none_guard",
+    "predicted": "missing_none_guard",
+    "score": 0.9001399690942516,
+    "accepted": true,
+    "correct": true,
+    "traceback": "Traceback (most recent call last):\n  File \"candidate.py\", line N, in <module>\n    print(solve(None))\n\n  File \"candidate.py\", line N, in solve\n    return list(record.keys())\n\nAttributeError: 'NoneType' object has no attribute 'keys'"
+  },
+  {
+    "id": "d2c65902cb2b1706",
+    "program": "optional_label",
+    "actual": "missing_none_guard",
+    "predicted": "missing_none_guard",
+    "score": 0.9002993690743739,
+    "accepted": true,
+    "correct": true,
+    "traceback": "Traceback (most recent call last):\n  File \"candidate.py\", line N, in <module>\n    print(solve(None))\n\n  File \"candidate.py\", line N, in solve\n    return label.replace('_', ' ')\n\nAttributeError: 'NoneType' object has no attribute 'replace'"
+  },
+  {
+    "id": "63ced836147c2610",
+    "program": "suffix",
+    "actual": "index_boundary",
+    "predicted": "index_boundary",
+    "score": 0.8846738393071515,
+    "accepted": true,
+    "correct": true,
+    "traceback": "Traceback (most recent call last):\n  File \"candidate.py\", line N, in <module>\n    print(solve('file0.txt'))\n\n  File \"candidate.py\", line N, in solve\n    return parts[len(parts)]\n\nIndexError: list index out of range"
+  },
+  {
+    "id": "9b22f48eb4987981",
+    "program": "suffix",
+    "actual": "index_boundary",
+    "predicted": "index_boundary",
+    "score": 0.8846738393071515,
+    "accepted": true,
+    "correct": true,
+    "traceback": "Traceback (most recent call last):\n  File \"candidate.py\", line N, in <module>\n    print(solve('file1.txt'))\n\n  File \"candidate.py\", line N, in solve\n    return parts[len(parts)]\n\nIndexError: list index out of range"
+  },
+  {
+    "id": "c996e9cc7caee175",
+    "program": "suffix",
+    "actual": "index_boundary",
+    "predicted": "index_boundary",
+    "score": 0.8846738393071515,
+    "accepted": true,
+    "correct": true,
+    "traceback": "Traceback (most recent call last):\n  File \"candidate.py\", line N, in <module>\n    print(solve('file2.txt'))\n\n  File \"candidate.py\", line N, in solve\n    return parts[len(parts)]\n\nIndexError: list index out of range"
+  },
+  {
+    "id": "c27e94d2f19535cf",
+    "program": "suffix",
+    "actual": "index_boundary",
+    "predicted": "index_boundary",
+    "score": 0.8846738393071515,
+    "accepted": true,
+    "correct": true,
+    "traceback": "Traceback (most recent call last):\n  File \"candidate.py\", line N, in <module>\n    print(solve('file3.txt'))\n\n  File \"candidate.py\", line N, in solve\n    return parts[len(parts)]\n\nIndexError: list index out of range"
+  },
+  {
+    "id": "145a5fd72f801229",
+    "program": "suffix",
+    "actual": "index_boundary",
+    "predicted": "index_boundary",
+    "score": 0.8846738393071515,
+    "accepted": true,
+    "correct": true,
+    "traceback": "Traceback (most recent call last):\n  File \"candidate.py\", line N, in <module>\n    print(solve('file4.txt'))\n\n  File \"candidate.py\", line N, in solve\n    return parts[len(parts)]\n\nIndexError: list index out of range"
+  },
+  {
+    "id": "0f9ab0a7aecaeaea",
+    "program": "suffix",
+    "actual": "index_boundary",
+    "predicted": "index_boundary",
+    "score": 0.8846738393071515,
+    "accepted": true,
+    "correct": true,
+    "traceback": "Traceback (most recent call last):\n  File \"candidate.py\", line N, in <module>\n    print(solve('file5.txt'))\n\n  File \"candidate.py\", line N, in solve\n    return parts[len(parts)]\n\nIndexError: list index out of range"
+  },
+  {
+    "id": "d5fc9b7430968521",
+    "program": "suffix",
+    "actual": "index_boundary",
+    "predicted": "index_boundary",
+    "score": 0.8846738393071515,
+    "accepted": true,
+    "correct": true,
+    "traceback": "Traceback (most recent call last):\n  File \"candidate.py\", line N, in <module>\n    print(solve('file6.txt'))\n\n  File \"candidate.py\", line N, in solve\n    return parts[len(parts)]\n\nIndexError: list index out of range"
+  },
+  {
+    "id": "603b19e4f5df0402",
+    "program": "suffix",
+    "actual": "index_boundary",
+    "predicted": "index_boundary",
+    "score": 0.8846738393071515,
+    "accepted": true,
+    "correct": true,
+    "traceback": "Traceback (most recent call last):\n  File \"candidate.py\", line N, in <module>\n    print(solve('file7.txt'))\n\n  File \"candidate.py\", line N, in solve\n    return parts[len(parts)]\n\nIndexError: list index out of range"
+  },
+  {
+    "id": "719bea8f37075adb",
+    "program": "backward_scan",
+    "actual": "index_boundary",
+    "predicted": "index_boundary",
+    "score": 0.8883704668038445,
+    "accepted": true,
+    "correct": true,
+    "traceback": "Traceback (most recent call last):\n  File \"candidate.py\", line N, in <module>\n    print(solve([0, 4, 9]))\n\n  File \"candidate.py\", line N, in solve\n    output.append(x[-i])\n\nIndexError: list index out of range"
+  },
+  {
+    "id": "0cc1a5072204cb60",
+    "program": "backward_scan",
+    "actual": "index_boundary",
+    "predicted": "index_boundary",
+    "score": 0.8876282232531059,
+    "accepted": true,
+    "correct": true,
+    "traceback": "Traceback (most recent call last):\n  File \"candidate.py\", line N, in <module>\n    print(solve([1, 5, 10]))\n\n  File \"candidate.py\", line N, in solve\n    output.append(x[-i])\n\nIndexError: list index out of range"
+  },
+  {
+    "id": "1056936e0c3aaa60",
+    "program": "backward_scan",
+    "actual": "index_boundary",
+    "predicted": "index_boundary",
+    "score": 0.8880843628351329,
+    "accepted": true,
+    "correct": true,
+    "traceback": "Traceback (most recent call last):\n  File \"candidate.py\", line N, in <module>\n    print(solve([2, 6, 11]))\n\n  File \"candidate.py\", line N, in solve\n    output.append(x[-i])\n\nIndexError: list index out of range"
+  },
+  {
+    "id": "b78e43fc03d33800",
+    "program": "backward_scan",
+    "actual": "index_boundary",
+    "predicted": "index_boundary",
+    "score": 0.888321198101538,
+    "accepted": true,
+    "correct": true,
+    "traceback": "Traceback (most recent call last):\n  File \"candidate.py\", line N, in <module>\n    print(solve([3, 7, 12]))\n\n  File \"candidate.py\", line N, in solve\n    output.append(x[-i])\n\nIndexError: list index out of range"
+  },
+  {
+    "id": "d8daf88e43d6182a",
+    "program": "backward_scan",
+    "actual": "index_boundary",
+    "predicted": "index_boundary",
+    "score": 0.8892733224008392,
+    "accepted": true,
+    "correct": true,
+    "traceback": "Traceback (most recent call last):\n  File \"candidate.py\", line N, in <module>\n    print(solve([4, 8, 13]))\n\n  File \"candidate.py\", line N, in solve\n    output.append(x[-i])\n\nIndexError: list index out of range"
+  },
+  {
+    "id": "dad39d18088976e3",
+    "program": "backward_scan",
+    "actual": "index_boundary",
+    "predicted": "index_boundary",
+    "score": 0.8886371796278236,
+    "accepted": true,
+    "correct": true,
+    "traceback": "Traceback (most recent call last):\n  File \"candidate.py\", line N, in <module>\n    print(solve([5, 9, 14]))\n\n  File \"candidate.py\", line N, in solve\n    output.append(x[-i])\n\nIndexError: list index out of range"
+  },
+  {
+    "id": "4f32d76fa8319a89",
+    "program": "backward_scan",
+    "actual": "index_boundary",
+    "predicted": "index_boundary",
+    "score": 0.8890270426387322,
+    "accepted": true,
+    "correct": true,
+    "traceback": "Traceback (most recent call last):\n  File \"candidate.py\", line N, in <module>\n    print(solve([6, 10, 15]))\n\n  File \"candidate.py\", line N, in solve\n    output.append(x[-i])\n\nIndexError: list index out of range"
+  },
+  {
+    "id": "97a88fe3cd91cb67",
+    "program": "backward_scan",
+    "actual": "index_boundary",
+    "predicted": "index_boundary",
+    "score": 0.8887703922174962,
+    "accepted": true,
+    "correct": true,
+    "traceback": "Traceback (most recent call last):\n  File \"candidate.py\", line N, in <module>\n    print(solve([7, 11, 16]))\n\n  File \"candidate.py\", line N, in solve\n    output.append(x[-i])\n\nIndexError: list index out of range"
+  },
+  {
+    "id": "46484cf48ecc89b4",
+    "program": "language",
+    "actual": "missing_mapping_key",
+    "predicted": "missing_mapping_key",
+    "score": 0.7898279040606259,
+    "accepted": true,
+    "correct": true,
+    "traceback": "Traceback (most recent call last):\n  File \"candidate.py\", line N, in <module>\n    print(solve({'session': 0}))\n\n  File \"candidate.py\", line N, in solve\n    language = x['language']\n\nKeyError: 'language'"
+  },
+  {
+    "id": "b64c15592f2dc0d5",
+    "program": "language",
+    "actual": "missing_mapping_key",
+    "predicted": "missing_mapping_key",
+    "score": 0.8259278626254989,
+    "accepted": true,
+    "correct": true,
+    "traceback": "Traceback (most recent call last):\n  File \"candidate.py\", line N, in <module>\n    print(solve({'session': 1}))\n\n  File \"candidate.py\", line N, in solve\n    language = x['language']\n\nKeyError: 'language'"
+  },
+  {
+    "id": "0ceba184004f7651",
+    "program": "language",
+    "actual": "missing_mapping_key",
+    "predicted": "missing_mapping_key",
+    "score": 0.8308348810786972,
+    "accepted": true,
+    "correct": true,
+    "traceback": "Traceback (most recent call last):\n  File \"candidate.py\", line N, in <module>\n    print(solve({'session': 2}))\n\n  File \"candidate.py\", line N, in solve\n    language = x['language']\n\nKeyError: 'language'"
+  },
+  {
+    "id": "8b7f1f3b6d47f0f8",
+    "program": "language",
+    "actual": "missing_mapping_key",
+    "predicted": "missing_mapping_key",
+    "score": 0.831958180253353,
+    "accepted": true,
+    "correct": true,
+    "traceback": "Traceback (most recent call last):\n  File \"candidate.py\", line N, in <module>\n    print(solve({'session': 3}))\n\n  File \"candidate.py\", line N, in solve\n    language = x['language']\n\nKeyError: 'language'"
+  },
+  {
+    "id": "01994d0399e844ce",
+    "program": "language",
+    "actual": "missing_mapping_key",
+    "predicted": "missing_mapping_key",
+    "score": 0.8382126759259453,
+    "accepted": true,
+    "correct": true,
+    "traceback": "Traceback (most recent call last):\n  File \"candidate.py\", line N, in <module>\n    print(solve({'session': 4}))\n\n  File \"candidate.py\", line N, in solve\n    language = x['language']\n\nKeyError: 'language'"
+  },
+  {
+    "id": "9a45210e57ede64b",
+    "program": "language",
+    "actual": "missing_mapping_key",
+    "predicted": "missing_mapping_key",
+    "score": 0.8352362494114205,
+    "accepted": true,
+    "correct": true,
+    "traceback": "Traceback (most recent call last):\n  File \"candidate.py\", line N, in <module>\n    print(solve({'session': 5}))\n\n  File \"candidate.py\", line N, in solve\n    language = x['language']\n\nKeyError: 'language'"
+  },
+  {
+    "id": "6240fcdaa5dd8d88",
+    "program": "language",
+    "actual": "missing_mapping_key",
+    "predicted": "missing_mapping_key",
+    "score": 0.8376331467698459,
+    "accepted": true,
+    "correct": true,
+    "traceback": "Traceback (most recent call last):\n  File \"candidate.py\", line N, in <module>\n    print(solve({'session': 6}))\n\n  File \"candidate.py\", line N, in solve\n    language = x['language']\n\nKeyError: 'language'"
+  },
+  {
+    "id": "f0bc5d9dfdfe6fba",
+    "program": "language",
+    "actual": "missing_mapping_key",
+    "predicted": "missing_mapping_key",
+    "score": 0.8376428430534738,
+    "accepted": true,
+    "correct": true,
+    "traceback": "Traceback (most recent call last):\n  File \"candidate.py\", line N, in <module>\n    print(solve({'session': 7}))\n\n  File \"candidate.py\", line N, in solve\n    language = x['language']\n\nKeyError: 'language'"
+  },
+  {
+    "id": "c4e69ce426d82e20",
+    "program": "discount",
+    "actual": "missing_mapping_key",
+    "predicted": "missing_mapping_key",
+    "score": 0.7898279040606259,
+    "accepted": true,
+    "correct": true,
+    "traceback": "Traceback (most recent call last):\n  File \"candidate.py\", line N, in <module>\n    print(solve({'invoice': 0}))\n\n  File \"candidate.py\", line N, in solve\n    discount = x['discount']\n\nKeyError: 'discount'"
+  },
+  {
+    "id": "a15bae92275eb17a",
+    "program": "discount",
+    "actual": "missing_mapping_key",
+    "predicted": "missing_mapping_key",
+    "score": 0.8259278626254989,
+    "accepted": true,
+    "correct": true,
+    "traceback": "Traceback (most recent call last):\n  File \"candidate.py\", line N, in <module>\n    print(solve({'invoice': 1}))\n\n  File \"candidate.py\", line N, in solve\n    discount = x['discount']\n\nKeyError: 'discount'"
+  },
+  {
+    "id": "9d5b99c2b1d1be78",
+    "program": "discount",
+    "actual": "missing_mapping_key",
+    "predicted": "missing_mapping_key",
+    "score": 0.8308348810786972,
+    "accepted": true,
+    "correct": true,
+    "traceback": "Traceback (most recent call last):\n  File \"candidate.py\", line N, in <module>\n    print(solve({'invoice': 2}))\n\n  File \"candidate.py\", line N, in solve\n    discount = x['discount']\n\nKeyError: 'discount'"
+  },
+  {
+    "id": "7eef3601abebc013",
+    "program": "discount",
+    "actual": "missing_mapping_key",
+    "predicted": "missing_mapping_key",
+    "score": 0.831958180253353,
+    "accepted": true,
+    "correct": true,
+    "traceback": "Traceback (most recent call last):\n  File \"candidate.py\", line N, in <module>\n    print(solve({'invoice': 3}))\n\n  File \"candidate.py\", line N, in solve\n    discount = x['discount']\n\nKeyError: 'discount'"
+  },
+  {
+    "id": "39647dd78f5cc97d",
+    "program": "discount",
+    "actual": "missing_mapping_key",
+    "predicted": "missing_mapping_key",
+    "score": 0.8382126759259453,
+    "accepted": true,
+    "correct": true,
+    "traceback": "Traceback (most recent call last):\n  File \"candidate.py\", line N, in <module>\n    print(solve({'invoice': 4}))\n\n  File \"candidate.py\", line N, in solve\n    discount = x['discount']\n\nKeyError: 'discount'"
+  },
+  {
+    "id": "07a4554318e517cf",
+    "program": "discount",
+    "actual": "missing_mapping_key",
+    "predicted": "missing_mapping_key",
+    "score": 0.8352362494114205,
+    "accepted": true,
+    "correct": true,
+    "traceback": "Traceback (most recent call last):\n  File \"candidate.py\", line N, in <module>\n    print(solve({'invoice': 5}))\n\n  File \"candidate.py\", line N, in solve\n    discount = x['discount']\n\nKeyError: 'discount'"
+  },
+  {
+    "id": "1b8db836ce0ab9f0",
+    "program": "discount",
+    "actual": "missing_mapping_key",
+    "predicted": "missing_mapping_key",
+    "score": 0.8376331467698459,
+    "accepted": true,
+    "correct": true,
+    "traceback": "Traceback (most recent call last):\n  File \"candidate.py\", line N, in <module>\n    print(solve({'invoice': 6}))\n\n  File \"candidate.py\", line N, in solve\n    discount = x['discount']\n\nKeyError: 'discount'"
+  },
+  {
+    "id": "f1de4946ee0a349d",
+    "program": "discount",
+    "actual": "missing_mapping_key",
+    "predicted": "missing_mapping_key",
+    "score": 0.8376428430534738,
+    "accepted": true,
+    "correct": true,
+    "traceback": "Traceback (most recent call last):\n  File \"candidate.py\", line N, in <module>\n    print(solve({'invoice': 7}))\n\n  File \"candidate.py\", line N, in solve\n    discount = x['discount']\n\nKeyError: 'discount'"
+  },
+  {
+    "id": "5659cecf2fc25013",
+    "program": "unit_cost",
+    "actual": "zero_denominator",
+    "predicted": "zero_denominator",
+    "score": 0.8785747904773042,
+    "accepted": true,
+    "correct": true,
+    "traceback": "Traceback (most recent call last):\n  File \"candidate.py\", line N, in <module>\n    print(solve([0, 0]))\n\n  File \"candidate.py\", line N, in solve\n    return round(amount / units, 2)\n\nZeroDivisionError: division by zero"
+  },
+  {
+    "id": "1baf4a0222833ac2",
+    "program": "unit_cost",
+    "actual": "zero_denominator",
+    "predicted": "zero_denominator",
+    "score": 0.8735882390269158,
+    "accepted": true,
+    "correct": true,
+    "traceback": "Traceback (most recent call last):\n  File \"candidate.py\", line N, in <module>\n    print(solve([10, 0]))\n\n  File \"candidate.py\", line N, in solve\n    return round(amount / units, 2)\n\nZeroDivisionError: division by zero"
+  },
+  {
+    "id": "9a885200a41ad538",
+    "program": "unit_cost",
+    "actual": "zero_denominator",
+    "predicted": "zero_denominator",
+    "score": 0.8798897705581793,
+    "accepted": true,
+    "correct": true,
+    "traceback": "Traceback (most recent call last):\n  File \"candidate.py\", line N, in <module>\n    print(solve([20, 0]))\n\n  File \"candidate.py\", line N, in solve\n    return round(amount / units, 2)\n\nZeroDivisionError: division by zero"
+  },
+  {
+    "id": "ac8448b8abb36e2b",
+    "program": "unit_cost",
+    "actual": "zero_denominator",
+    "predicted": "zero_denominator",
+    "score": 0.8644865968100908,
+    "accepted": true,
+    "correct": true,
+    "traceback": "Traceback (most recent call last):\n  File \"candidate.py\", line N, in <module>\n    print(solve([30, 0]))\n\n  File \"candidate.py\", line N, in solve\n    return round(amount / units, 2)\n\nZeroDivisionError: division by zero"
+  },
+  {
+    "id": "a1399c6142f44a52",
+    "program": "unit_cost",
+    "actual": "zero_denominator",
+    "predicted": "zero_denominator",
+    "score": 0.8798897705581793,
+    "accepted": true,
+    "correct": true,
+    "traceback": "Traceback (most recent call last):\n  File \"candidate.py\", line N, in <module>\n    print(solve([40, 0]))\n\n  File \"candidate.py\", line N, in solve\n    return round(amount / units, 2)\n\nZeroDivisionError: division by zero"
+  },
+  {
+    "id": "919fef88d864328f",
+    "program": "unit_cost",
+    "actual": "zero_denominator",
+    "predicted": "zero_denominator",
+    "score": 0.8798897705581793,
+    "accepted": true,
+    "correct": true,
+    "traceback": "Traceback (most recent call last):\n  File \"candidate.py\", line N, in <module>\n    print(solve([50, 0]))\n\n  File \"candidate.py\", line N, in solve\n    return round(amount / units, 2)\n\nZeroDivisionError: division by zero"
+  },
+  {
+    "id": "db70844e83bc3937",
+    "program": "unit_cost",
+    "actual": "zero_denominator",
+    "predicted": "zero_denominator",
+    "score": 0.8726279926669666,
+    "accepted": true,
+    "correct": true,
+    "traceback": "Traceback (most recent call last):\n  File \"candidate.py\", line N, in <module>\n    print(solve([60, 0]))\n\n  File \"candidate.py\", line N, in solve\n    return round(amount / units, 2)\n\nZeroDivisionError: division by zero"
+  },
+  {
+    "id": "871655aa6035c4bb",
+    "program": "unit_cost",
+    "actual": "zero_denominator",
+    "predicted": "zero_denominator",
+    "score": 0.8798897705581793,
+    "accepted": true,
+    "correct": true,
+    "traceback": "Traceback (most recent call last):\n  File \"candidate.py\", line N, in <module>\n    print(solve([70, 0]))\n\n  File \"candidate.py\", line N, in solve\n    return round(amount / units, 2)\n\nZeroDivisionError: division by zero"
+  },
+  {
+    "id": "c8851bed7b2b44ca",
+    "program": "speed",
+    "actual": "zero_denominator",
+    "predicted": "zero_denominator",
+    "score": 0.8922078662074795,
+    "accepted": true,
+    "correct": true,
+    "traceback": "Traceback (most recent call last):\n  File \"candidate.py\", line N, in <module>\n    print(solve([1, 0]))\n\n  File \"candidate.py\", line N, in solve\n    return distance / duration\n\nZeroDivisionError: division by zero"
+  },
+  {
+    "id": "acb8ff0584eee1b9",
+    "program": "speed",
+    "actual": "zero_denominator",
+    "predicted": "zero_denominator",
+    "score": 0.8921829212338607,
+    "accepted": true,
+    "correct": true,
+    "traceback": "Traceback (most recent call last):\n  File \"candidate.py\", line N, in <module>\n    print(solve([2, 0]))\n\n  File \"candidate.py\", line N, in solve\n    return distance / duration\n\nZeroDivisionError: division by zero"
+  },
+  {
+    "id": "e936db534ae23899",
+    "program": "speed",
+    "actual": "zero_denominator",
+    "predicted": "zero_denominator",
+    "score": 0.892108675674199,
+    "accepted": true,
+    "correct": true,
+    "traceback": "Traceback (most recent call last):\n  File \"candidate.py\", line N, in <module>\n    print(solve([3, 0]))\n\n  File \"candidate.py\", line N, in solve\n    return distance / duration\n\nZeroDivisionError: division by zero"
+  },
+  {
+    "id": "a9514824b4eaabc2",
+    "program": "speed",
+    "actual": "zero_denominator",
+    "predicted": "zero_denominator",
+    "score": 0.8922167502623549,
+    "accepted": true,
+    "correct": true,
+    "traceback": "Traceback (most recent call last):\n  File \"candidate.py\", line N, in <module>\n    print(solve([4, 0]))\n\n  File \"candidate.py\", line N, in solve\n    return distance / duration\n\nZeroDivisionError: division by zero"
+  },
+  {
+    "id": "0ac4115e84df5d07",
+    "program": "speed",
+    "actual": "zero_denominator",
+    "predicted": "zero_denominator",
+    "score": 0.8924402268966987,
+    "accepted": true,
+    "correct": true,
+    "traceback": "Traceback (most recent call last):\n  File \"candidate.py\", line N, in <module>\n    print(solve([5, 0]))\n\n  File \"candidate.py\", line N, in solve\n    return distance / duration\n\nZeroDivisionError: division by zero"
+  },
+  {
+    "id": "dc566b2643452914",
+    "program": "speed",
+    "actual": "zero_denominator",
+    "predicted": "zero_denominator",
+    "score": 0.8922385336976658,
+    "accepted": true,
+    "correct": true,
+    "traceback": "Traceback (most recent call last):\n  File \"candidate.py\", line N, in <module>\n    print(solve([6, 0]))\n\n  File \"candidate.py\", line N, in solve\n    return distance / duration\n\nZeroDivisionError: division by zero"
+  },
+  {
+    "id": "0b17210d4429d6ec",
+    "program": "speed",
+    "actual": "zero_denominator",
+    "predicted": "zero_denominator",
+    "score": 0.8922405653089244,
+    "accepted": true,
+    "correct": true,
+    "traceback": "Traceback (most recent call last):\n  File \"candidate.py\", line N, in <module>\n    print(solve([7, 0]))\n\n  File \"candidate.py\", line N, in solve\n    return distance / duration\n\nZeroDivisionError: division by zero"
+  },
+  {
+    "id": "4acccb82ab96dc63",
+    "program": "speed",
+    "actual": "zero_denominator",
+    "predicted": "zero_denominator",
+    "score": 0.8882592574202247,
+    "accepted": true,
+    "correct": true,
+    "traceback": "Traceback (most recent call last):\n  File \"candidate.py\", line N, in <module>\n    print(solve([8, 0]))\n\n  File \"candidate.py\", line N, in solve\n    return distance / duration\n\nZeroDivisionError: division by zero"
+  },
+  {
+    "id": "db1f0f86e563cc8b",
+    "program": "partition_count",
+    "actual": "wrong_argument_count",
+    "predicted": "wrong_argument_count",
+    "score": 0.637889079214053,
+    "accepted": true,
+    "correct": true,
+    "traceback": "Traceback (most recent call last):\n  File \"candidate.py\", line N, in <module>\n    print(solve(0))\n\n  File \"candidate.py\", line N, in solve\n    return divmod(x)\n\nTypeError: divmod expected 2 arguments, got 1"
+  },
+  {
+    "id": "88f31c70d52eb59c",
+    "program": "partition_count",
+    "actual": "wrong_argument_count",
+    "predicted": "wrong_argument_count",
+    "score": 0.6962499929867657,
+    "accepted": true,
+    "correct": true,
+    "traceback": "Traceback (most recent call last):\n  File \"candidate.py\", line N, in <module>\n    print(solve(1))\n\n  File \"candidate.py\", line N, in solve\n    return divmod(x)\n\nTypeError: divmod expected 2 arguments, got 1"
+  },
+  {
+    "id": "bf7a90468de1135b",
+    "program": "partition_count",
+    "actual": "wrong_argument_count",
+    "predicted": "wrong_argument_count",
+    "score": 0.6609073605580567,
+    "accepted": true,
+    "correct": true,
+    "traceback": "Traceback (most recent call last):\n  File \"candidate.py\", line N, in <module>\n    print(solve(2))\n\n  File \"candidate.py\", line N, in solve\n    return divmod(x)\n\nTypeError: divmod expected 2 arguments, got 1"
+  },
+  {
+    "id": "7f72ee57d7f86d67",
+    "program": "partition_count",
+    "actual": "wrong_argument_count",
+    "predicted": "wrong_argument_count",
+    "score": 0.6849461170519808,
+    "accepted": true,
+    "correct": true,
+    "traceback": "Traceback (most recent call last):\n  File \"candidate.py\", line N, in <module>\n    print(solve(3))\n\n  File \"candidate.py\", line N, in solve\n    return divmod(x)\n\nTypeError: divmod expected 2 arguments, got 1"
+  },
+  {
+    "id": "35f39dfcd6a16f0d",
+    "program": "partition_count",
+    "actual": "wrong_argument_count",
+    "predicted": "wrong_argument_count",
+    "score": 0.6284948241613397,
+    "accepted": true,
+    "correct": true,
+    "traceback": "Traceback (most recent call last):\n  File \"candidate.py\", line N, in <module>\n    print(solve(4))\n\n  File \"candidate.py\", line N, in solve\n    return divmod(x)\n\nTypeError: divmod expected 2 arguments, got 1"
+  },
+  {
+    "id": "8993792483b474e0",
+    "program": "partition_count",
+    "actual": "wrong_argument_count",
+    "predicted": "wrong_argument_count",
+    "score": 0.629658386056709,
+    "accepted": true,
+    "correct": true,
+    "traceback": "Traceback (most recent call last):\n  File \"candidate.py\", line N, in <module>\n    print(solve(5))\n\n  File \"candidate.py\", line N, in solve\n    return divmod(x)\n\nTypeError: divmod expected 2 arguments, got 1"
+  },
+  {
+    "id": "c759485489af4482",
+    "program": "partition_count",
+    "actual": "wrong_argument_count",
+    "predicted": "wrong_argument_count",
+    "score": 0.6281976099227357,
+    "accepted": true,
+    "correct": true,
+    "traceback": "Traceback (most recent call last):\n  File \"candidate.py\", line N, in <module>\n    print(solve(6))\n\n  File \"candidate.py\", line N, in solve\n    return divmod(x)\n\nTypeError: divmod expected 2 arguments, got 1"
+  },
+  {
+    "id": "5aaba2c466eb2e75",
+    "program": "partition_count",
+    "actual": "wrong_argument_count",
+    "predicted": "wrong_argument_count",
+    "score": 0.6283070718162167,
+    "accepted": true,
+    "correct": true,
+    "traceback": "Traceback (most recent call last):\n  File \"candidate.py\", line N, in <module>\n    print(solve(7))\n\n  File \"candidate.py\", line N, in solve\n    return divmod(x)\n\nTypeError: divmod expected 2 arguments, got 1"
+  },
+  {
+    "id": "b7fe47bcf788533a",
+    "program": "decorate",
+    "actual": "wrong_argument_count",
+    "predicted": "wrong_argument_count",
+    "score": 0.8985470452222851,
+    "accepted": true,
+    "correct": true,
+    "traceback": "Traceback (most recent call last):\n  File \"candidate.py\", line N, in <module>\n    print(solve(0))\n\n  File \"candidate.py\", line N, in solve\n    return join_label(x)\n\nTypeError: join_label() missing 1 required positional argument: 'value'"
+  },
+  {
+    "id": "a7a04e6218b9ad66",
+    "program": "decorate",
+    "actual": "wrong_argument_count",
+    "predicted": "wrong_argument_count",
+    "score": 0.8991954253350332,
+    "accepted": true,
+    "correct": true,
+    "traceback": "Traceback (most recent call last):\n  File \"candidate.py\", line N, in <module>\n    print(solve(1))\n\n  File \"candidate.py\", line N, in solve\n    return join_label(x)\n\nTypeError: join_label() missing 1 required positional argument: 'value'"
+  },
+  {
+    "id": "9ab0ec4592b8f4be",
+    "program": "decorate",
+    "actual": "wrong_argument_count",
+    "predicted": "wrong_argument_count",
+    "score": 0.8990301421002171,
+    "accepted": true,
+    "correct": true,
+    "traceback": "Traceback (most recent call last):\n  File \"candidate.py\", line N, in <module>\n    print(solve(2))\n\n  File \"candidate.py\", line N, in solve\n    return join_label(x)\n\nTypeError: join_label() missing 1 required positional argument: 'value'"
+  },
+  {
+    "id": "28f8a13b72a34352",
+    "program": "decorate",
+    "actual": "wrong_argument_count",
+    "predicted": "wrong_argument_count",
+    "score": 0.8990352487295271,
+    "accepted": true,
+    "correct": true,
+    "traceback": "Traceback (most recent call last):\n  File \"candidate.py\", line N, in <module>\n    print(solve(3))\n\n  File \"candidate.py\", line N, in solve\n    return join_label(x)\n\nTypeError: join_label() missing 1 required positional argument: 'value'"
+  },
+  {
+    "id": "398a03c90880776d",
+    "program": "decorate",
+    "actual": "wrong_argument_count",
+    "predicted": "wrong_argument_count",
+    "score": 0.8976902570639463,
+    "accepted": true,
+    "correct": true,
+    "traceback": "Traceback (most recent call last):\n  File \"candidate.py\", line N, in <module>\n    print(solve(4))\n\n  File \"candidate.py\", line N, in solve\n    return join_label(x)\n\nTypeError: join_label() missing 1 required positional argument: 'value'"
+  },
+  {
+    "id": "ac77719154aa355a",
+    "program": "decorate",
+    "actual": "wrong_argument_count",
+    "predicted": "wrong_argument_count",
+    "score": 0.8979261254056451,
+    "accepted": true,
+    "correct": true,
+    "traceback": "Traceback (most recent call last):\n  File \"candidate.py\", line N, in <module>\n    print(solve(5))\n\n  File \"candidate.py\", line N, in solve\n    return join_label(x)\n\nTypeError: join_label() missing 1 required positional argument: 'value'"
+  },
+  {
+    "id": "0c9c6f6bffcb847e",
+    "program": "decorate",
+    "actual": "wrong_argument_count",
+    "predicted": "wrong_argument_count",
+    "score": 0.8977212916378579,
+    "accepted": true,
+    "correct": true,
+    "traceback": "Traceback (most recent call last):\n  File \"candidate.py\", line N, in <module>\n    print(solve(6))\n\n  File \"candidate.py\", line N, in solve\n    return join_label(x)\n\nTypeError: join_label() missing 1 required positional argument: 'value'"
+  },
+  {
+    "id": "49c842a38069e38c",
+    "program": "decorate",
+    "actual": "wrong_argument_count",
+    "predicted": "wrong_argument_count",
+    "score": 0.8977240343575719,
+    "accepted": true,
+    "correct": true,
+    "traceback": "Traceback (most recent call last):\n  File \"candidate.py\", line N, in <module>\n    print(solve(7))\n\n  File \"candidate.py\", line N, in solve\n    return join_label(x)\n\nTypeError: join_label() missing 1 required positional argument: 'value'"
+  }
+]
