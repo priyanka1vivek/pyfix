@@ -5,6 +5,10 @@ A Python ML project with an inspectable repair studio, calibrated bug-category p
 
 **Version 2:** 48 authored task programs, four disjoint program partitions, five classifier comparisons, three feature ablations, uncertainty checks, six AST repair families, paired repair experiments, and an external QuixBugs scope challenge. This is a small research prototype; synthetic scores are not production accuracy.
 
+**Verified:** [GitHub Actions run](https://github.com/priyanka1vivek/pyfix/actions/runs/37340223036) passed 26 pytest tests, 10 core checks, Docker isolation/repair, and desktop/mobile browser checks. Live Gemini remains unverified without credentials.
+
+![PyFix research workspace](docs/repair-studio.png)
+
 ## Run it on Windows
 
 Download this repository with **Code → Download ZIP**, extract it and open the folder containing `requirements.txt` in VS Code. In its terminal:
