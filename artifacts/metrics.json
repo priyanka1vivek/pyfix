@@ -1,0 +1,115 @@
+{
+  "selected_model": "Logistic regression",
+  "selection": "Highest validation macro F1; test untouched during selection",
+  "rows": [
+    {
+      "model": "Naive Bayes",
+      "validation": {
+        "accuracy": 0.9705882352941176,
+        "precision_macro": 0.9743589743589745,
+        "recall_macro": 0.9722222222222223,
+        "f1_macro": 0.970959595959596
+      },
+      "test": {
+        "accuracy": 0.9436619718309859,
+        "precision_macro": 0.9583333333333334,
+        "recall_macro": 0.9444444444444445,
+        "f1_macro": 0.942857142857143
+      }
+    },
+    {
+      "model": "Logistic regression",
+      "validation": {
+        "accuracy": 1.0,
+        "precision_macro": 1.0,
+        "recall_macro": 1.0,
+        "f1_macro": 1.0
+      },
+      "test": {
+        "accuracy": 1.0,
+        "precision_macro": 1.0,
+        "recall_macro": 1.0,
+        "f1_macro": 1.0
+      }
+    },
+    {
+      "model": "SVM",
+      "validation": {
+        "accuracy": 1.0,
+        "precision_macro": 1.0,
+        "recall_macro": 1.0,
+        "f1_macro": 1.0
+      },
+      "test": {
+        "accuracy": 1.0,
+        "precision_macro": 1.0,
+        "recall_macro": 1.0,
+        "f1_macro": 1.0
+      }
+    },
+    {
+      "model": "Random forest",
+      "validation": {
+        "accuracy": 0.45588235294117646,
+        "precision_macro": 0.5408163265306123,
+        "recall_macro": 0.4343434343434343,
+        "f1_macro": 0.3870023419203747
+      },
+      "test": {
+        "accuracy": 0.5633802816901409,
+        "precision_macro": 0.5465116279069767,
+        "recall_macro": 0.5694444444444445,
+        "f1_macro": 0.5040998217468805
+      }
+    },
+    {
+      "model": "AdaBoost",
+      "validation": {
+        "accuracy": 0.3382352941176471,
+        "precision_macro": 0.20175438596491227,
+        "recall_macro": 0.3333333333333333,
+        "f1_macro": 0.2246376811594203
+      },
+      "test": {
+        "accuracy": 0.323943661971831,
+        "precision_macro": 0.19999999999999998,
+        "recall_macro": 0.3333333333333333,
+        "f1_macro": 0.2222222222222222
+      }
+    }
+  ],
+  "baselines": {
+    "majority": {
+      "accuracy": 0.15492957746478872,
+      "precision_macro": 0.025821596244131453,
+      "recall_macro": 0.16666666666666666,
+      "f1_macro": 0.044715447154471545
+    },
+    "exception_only": {
+      "accuracy": 0.8309859154929577,
+      "precision_macro": 0.75,
+      "recall_macro": 0.8333333333333334,
+      "f1_macro": 0.7777777777777777
+    }
+  },
+  "counts": {
+    "train": 271,
+    "validation": 68,
+    "test": 71
+  },
+  "classes": [
+    "index_boundary",
+    "missing_mapping_key",
+    "missing_none_guard",
+    "type_conversion",
+    "wrong_argument_count",
+    "zero_denominator"
+  ],
+  "seed": 42,
+  "limitations": [
+    "Synthetic mutations; six expression families per class only.",
+    "Held-out families improve evaluation but do not establish real-world generalisation.",
+    "Probabilities are model scores, not calibrated guarantees.",
+    "Tracebacks can be ambiguous; tests determine patch acceptance."
+  ]
+}

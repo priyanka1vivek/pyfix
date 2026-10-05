@@ -1,0 +1,15 @@
+test_execution (stdlib_checks.CoreChecks.test_execution) ... ok
+test_gemini_missing_configuration (stdlib_checks.CoreChecks.test_gemini_missing_configuration) ... ok
+test_invalid_patch (stdlib_checks.CoreChecks.test_invalid_patch) ... ok
+test_missing_test (stdlib_checks.CoreChecks.test_missing_test) ... ok
+test_rejected_patch (stdlib_checks.CoreChecks.test_rejected_patch) ... ok
+test_repair (stdlib_checks.CoreChecks.test_repair) ... ok
+test_retry_limit (stdlib_checks.CoreChecks.test_retry_limit) ... ok
+test_secret_not_in_child_environment (stdlib_checks.CoreChecks.test_secret_not_in_child_environment) ... ok
+test_splits (stdlib_checks.CoreChecks.test_splits) ... ok
+test_timeout (stdlib_checks.CoreChecks.test_timeout) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.506s
+
+OK
