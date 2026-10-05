@@ -1,4 +1,4 @@
-# Assessment submission wording
+# Assessment submission 
 
 **Title:** Traceback-Based Bug Classification for Automated Python Repair
 
