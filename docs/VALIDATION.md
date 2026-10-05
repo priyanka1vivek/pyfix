@@ -6,16 +6,16 @@
 - Trained all five classifiers and generated held-out metrics, per-class reports, confusion matrices and a PCA plot.
 - Ten standard-library behavioral checks passed; output is saved in `artifacts/core-checks.txt`.
 - Core repair was exercised against an independent unittest suite, including incorrect and invalid patch rejection, retry stopping and original source retention.
+- GitHub Actions successfully installed the package, regenerated the dataset, trained all five models and passed all 11 pytest tests, including FastAPI endpoint integration. [Verified run](https://github.com/priyanka1vivek/pyfix/actions/runs/37267046220), code commit `360c9a87ce49f397816629baec65e60272807300`. One third-party TestClient deprecation warning was reported.
 - Python source compiled and frontend JavaScript passed Node's syntax check.
 
 ## Not executed in this build environment
 
-- The full pytest suite and FastAPI HTTP integration: pytest, FastAPI and associated packages were unavailable and package installation failed in the restricted environment.
 - Docker execution: Docker was unavailable.
 - Live Gemini generation: no user API key was supplied.
 - Browser visual verification: a Playwright package was present, but no browser executable was installed.
 
-These are outstanding checks, not passing checks. Install the declared dependencies and run `python -m pytest -q`; build `Dockerfile.runner` and run the web demo under Docker before treating that path as verified. A GitHub Actions workflow is included but has not run because the project has not yet been published to a repository.
+These are outstanding checks, not passing checks. Build `Dockerfile.runner` and run the web demo under Docker before treating that path as verified. The first CI run exposed an editable-install package-discovery error; explicit package discovery fixed it, and the next run passed.
 
 ## Measured synthetic results
 
